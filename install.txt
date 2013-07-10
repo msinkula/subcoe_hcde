@@ -1,0 +1,94 @@
+1. Copy current file system
+
+2. Copy db
+
+3. Set up settings.php
+
+4. Put site in maintenance mode
+
+5. Update all modules and core
+	- ignore views update errors
+
+6. Disable All modules
+
+7. Disable coe theme and make garland default theme
+
+8. Update Drupal files to 7 versions
+
+9. Copy new htaccess file
+
+10. Run update.php
+
+11. Cross fingers
+
+12. Copy test.engr sites directory and move new settings file in
+
+13. Add all admin permissions
+
+14. Enable modules:
+	Block
+	Blog
+	Color
+	Contact
+	Db Logging
+	Help
+	Image
+	List
+	Menu
+	Path
+	PHP Filter
+	Trigger
+	Update Manager
+
+	Admin menu toolbar style
+
+	CCK
+	Content Migrate
+
+	Chaos Tools
+
+	Custom Error
+	Google CSE
+	Redirect
+	Revisioning
+	Taxonomy Access Control
+
+	Shib
+	Analytics
+
+	jQuery Update
+
+	Views UI
+
+
+15. Migrate CCK Fields
+
+16. Add Taxonomy Permissions
+
+17. Rebuild Permissions
+
+18. Fix status page errors
+
+19. Run update.php
+
+19. Set theme to newcoe
+
+20. Run Cron
+
+21. Set up Frontpage Rotation Item Content Type and import view. Match right box content types and displays properly
+
+22. Remove all blocks from left region for CoE Redesign
+
+23. Remove "For" from menus
+
+24. Fix blocks
+	UPDATE block SET theme = 'bak' where theme = 'newcoe';
+	INSERT INTO block( module, delta, theme, 
+	STATUS , weight, region, custom, visibility, pages, title, cache ) (
+	SELECT module, delta,  'newcoe', 
+	STATUS , weight, region, custom, visibility, pages, title, cache
+	FROM block
+	WHERE theme =  'coe');
+
+
+

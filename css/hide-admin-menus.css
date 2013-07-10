@@ -1,0 +1,7 @@
+#admin-menu .admin-menu-toolbar-category > a[href="/admin/config"],
+#admin-menu .admin-menu-toolbar-category > a[href="/admin/structure"],
+#admin-menu .admin-menu-toolbar-category > a[href="/admin/index"],
+#admin-menu .admin-menu-toolbar-category > a[href="/admin/tasks"]
+{
+	display: none;
+}

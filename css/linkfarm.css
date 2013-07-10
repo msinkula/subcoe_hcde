@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#obama {
+	background-color:#27194C;
+	background-image:url('img/footer_stripe.png');
+	background-repeat:repeat-x;
+	/* border:1px solid #CCC; */
+	float:left;
+	width:100%;
+	padding:0 0 20px 0;
+}
+
+#footerlinks {
+	color:#ffffff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:.7em;
+	margin-left:auto;
+	margin-right:auto;
+	max-width:932px;
+	/* border:1px solid #CCC; */
+	padding: 10px 0;
+}
+
+/* contains one or more menus in a vertical stack */
+#footerlinks ul li {
+	width:198px;
+	vertical-align: top;
+	display: inline-block;
+	/* border:1px solid #CCC; */
+	margin:0 24px 0 0;
+	padding:0;
+	font-size: 10px;
+}
+
+/* menu within grouping */
+#footerlinks ul li{ 
+	margin-bottom:12px;
+}
+
+/* bit of space between menu items */
+#footerlinks ul li ul li{ 
+	margin:2px 0 2px 0;
+}
+
+/* format links */
+#footerlinks a {
+	text-decoration:none;
+	color:#ffffff;
+}
+
+/* menu label bold */
+#footerlinks ul li a,
+#footerlinks ul li a:visited,
+#footerlinks ul li a:hover,
+#footerlinks ul li span {
+	font-weight:bold;
+	color: #FFF;
+}
+
+/* menu items not bold */
+#footerlinks ul li ul li a,
+#footerlinks ul li ul li a:visited,
+#footerlinks ul li ul li a:hover {
+	font-weight:normal;
+	color: #FFF;
+}
+
+/* underline upon hover */
+#footerlinks ul li a:hover,
+#footerlinks ul li ul li a:hover {
+	text-decoration:underline;
+}
+
+d#footerlinks ul li {
+	border:0;
+}
+
+#footerMain {
+	margin-top: 0px;
+}
+
+
+#windowCampus {
+	box-shadow:
+}
+
+#socialmenu {
+	padding-top:12px;
+}
+#socialmenu li img {
+	margin-right:3px;
+	position:relative;
+	top:-10px;
+	margin-top:4px;
+}
+
+#socialmenu li {
+	display: inline-block;
+	width: auto !important;
+}

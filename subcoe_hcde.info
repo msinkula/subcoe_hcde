@@ -1,0 +1,31 @@
+name = CoE Sub Theme for HCDE
+description = Responsive Theme for College of Engineering sub-sites 2012 and poop.
+screenshot = screenshot.png
+version = 1.0
+core = 7.x
+engine = phptemplate
+
+regions[left]           = left sidebar
+regions[left_bottom]    = left sidebar bottom
+regions[right]          = right sidebar
+regions[content]        = Content
+regions[right_news]     = right news sidebar
+regions[right_events]   = right events sidebar
+regions[right_contact]  = right contact sidebar
+regions[right_box_1]    = right box one sidebar
+regions[right_box_2]    = right box two sidebar
+regions[navbar]         = navigation bar
+regions[content_top]    = content top
+regions[content_bottom] = content bottom
+regions[header]         = Header
+regions[footer]         = Footer
+regions[linkfarm]       = Linkfarm
+regions[closure_region] = closure
+
+features[favicon]       = favicon
+
+scripts[]               = js/respond.min.js
+scripts[]               = js/weather.jquery.js
+scripts[]               = js/jquery-binding-fix-for-1.5.2.js
+scripts[]               = js/switchcontent.js
+scripts[]               = js/jquery.bxslider.js

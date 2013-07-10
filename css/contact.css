@@ -1,0 +1,26 @@
+#midcol h3 {
+	font-size: 1em;
+	font-family: Helvetica, FreeSans, sans-serif;
+	margin-top:24px;
+}
+
+#midcol div.field ul {
+	list-style-type:none;
+	margin-left: 0px;
+}
+
+#midcol ul li {
+	font-weight: bold;
+	margin-bottom:1em;
+	font-size: 1em;
+}
+
+#midcol div.field ul li ul {
+	list-style-type: disc;
+	margin-left:15px;
+}
+
+#midcol div.field ul li ul li {
+	font-weight:normal;
+	margin-bottom:0px;
+}

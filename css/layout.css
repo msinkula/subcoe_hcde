@@ -1,0 +1,337 @@
+#header, #footerMargin, #autoMargin, #panel
+{
+    width: 990px;
+}
+
+#rotation
+{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+}
+
+#navg
+{
+    position: relative;
+    z-index: 10;
+}
+
+#rightcol
+{
+    float: right;
+    width: 220px;
+}
+#rightcol img.boxed
+{
+    width: 210px;
+}
+
+#leftcol
+{
+	float: left;
+	width: 200px;
+}
+
+#midcol
+{
+	float: left;
+	width: 510px;
+	padding-left: 10px;
+}
+
+#midcol.extended
+{
+	width: 725px;
+}
+
+#events
+{
+    float: left;
+    width: 140px;
+}
+
+#showcase
+{
+    float: left;
+    width: 550px;
+    border-right: 1px solid #ccc;
+    padding: 0 20px 20px 0;
+    margin-right: 20px;
+}
+
+#rotation .rotation-link img
+{
+    max-width: 990px;
+    width: 100%;
+    height: auto;
+}
+
+#spotlight
+{
+    width: 100%;
+    height: 200px;
+}
+#spotlight .newsitem
+{
+    float: left;
+    width: 30%;
+}
+
+#midcol-rotation
+{
+	max-width: 505px;
+	width: 100%;
+	height: auto;
+}
+
+.showcase-tab
+{
+    padding-right: 10px;
+}
+
+#vertnews {
+    position: relative;
+    float: right;
+    margin-left: 30px;
+    height: 100%;
+    width: 138px;
+}
+#vertnews h3, #vertnews p
+{
+    padding: 2px;
+}
+#vertnews img
+{
+    width: 130px;
+}
+
+
+#content
+{
+    width: 96%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#visual-portal-wrapper
+{
+	background-color: #241649; /* http://slayeroffice.com/tools/color_palette/?hex=241649 */
+	
+}
+
+
+
+#bg
+{
+	position: relative;
+	z-index: 1;
+}
+
+#nav-bg
+{
+	background-image: url(../img/nav_bg.gif);
+	background-repeat: repeat-x;
+	background-position: center 89px;
+}
+#nav-bg.darker
+{
+	background-image: url(../img/nav_bg_darker.gif) !important;
+}
+
+#header
+{
+	position: relative;
+	margin: 0 auto;
+	clear: both;
+}
+
+#panel {
+	margin: 0 auto;
+	background-repeat: repeat-y;
+	background: white;
+	padding-bottom: 20px;
+    box-shadow: 0 0 7px #333;
+}
+
+#panel.fixed-adjust
+{
+    margin-top: 40px;
+}
+
+#footerBG
+{
+	border-top: 1px solid #5B5177;
+
+	/*background: #d1d1d1;*/ /* Old browsers */
+	background: -moz-linear-gradient(top,  #120B25 0%, #241649 20%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(40%,#ffffff));*/ /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* IE10+ */
+	/*background: linear-gradient(to bottom,  #d1d1d1 0%,#ffffff 40%);*/ /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#ffffff',GradientType=0 );*/ /* IE6-9 */
+
+	margin-top: 10px;
+}
+
+#footerMargin
+{
+	margin: 0 auto;
+	padding: 0 0 15px 0;
+	background-image: url(../img/footer/footer_w_light.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+#footerSkyline
+{
+	height: 120px;
+	background-image: url(../img/footer/bg-footerSkyline.jpg);
+	background-repeat: no-repeat;
+	background-position: 200px bottom;
+	margin: 0 0 20px 0;
+	border-bottom: 1px solid #adadad;
+	margin: 0 auto;
+}
+#footerSkyline h2
+{
+	float: left;
+	font-size: 20px;
+	color: #FFF;
+	padding: 75px 0 0 0;
+	letter-spacing: -0.03em;
+	line-height: 1.2em;
+	margin: 15px 0 5px;
+	border: 0;
+	background-color: transparent;
+	font-weight: normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+div#footerShare {
+	float:right;
+	position:relative;
+	top:93px;
+}
+
+#footerlinks ul li {
+	width:140px;
+}
+
+#footerMain {
+	/*background-image: url(../img/footer/bg.gif);*/
+	background-color: #000;
+	background-repeat: repeat-x;
+	height: 25px;
+	margin-top: 10px;
+	overflow: hidden;
+	clear: both;
+}
+
+#footerLeft {
+	float: left;
+	padding-left: 40px;
+}
+
+#footerRight {
+	float: right;
+	padding-right: 40px;
+}
+
+#footerCenter {
+	width: 260px;
+	margin: 0 auto;
+}
+
+#footerMain ul {
+	margin: 0;
+	padding: 0;
+	display: block;
+	list-style-type: none;
+}
+
+#footerMain li {
+	display: inline;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+#footerMain li a {
+	text-decoration: none;
+	color: white;
+	float: left;
+	padding: 8px 6px 7px 0;
+	text-transform: uppercase;
+}
+
+.footerLinkBorder {
+    float: left;
+    padding-left: 10px;
+    background-image: url(/sites/engr.washington.edu/themes/newcoe/img/footer/leftbar.png);
+    background-repeat: no-repeat;
+    background-position: 0 6px;
+}
+
+#subnav
+{
+	margin: 0;
+}
+
+#social a
+{
+	width: 20%;
+    display: block;
+    float: left;
+}
+
+#front-right-links
+{
+    background: url(/sites/engr.washington.edu/files/page-front/students/home-student-m-sweater.jpg) 121px top no-repeat;
+}
+/* other options: sb_wh_shirt_f.jpg */
+
+
+#front-right-links h3
+{
+	padding-bottom: 15px;
+}
+
+.newsitem
+{
+	padding: 0 0 20px 0;
+}
+
+
+#coeads img
+{
+	margin-bottom: 20px;
+}
+
+/* fix uw alerts banner z-index */
+#uwalert-alertMessage
+{
+    z-index: 100;
+    position: relative;
+}
+
+#mobilenavsection
+{
+    display: none;
+    margin: 0 auto;
+}
+
+#image-hider
+{
+    position: fixed;
+    left: 0;
+    top: 200px;
+    background-color: white;
+    cursor: pointer;
+    z-index: 200;
+}
+#image-hider:hover
+{
+    background-color: #aaa;
+}

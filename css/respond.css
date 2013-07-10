@@ -1,0 +1,474 @@
+/*div {
+	border: 1px solid magenta;
+}*/
+
+@media screen and (max-width: 990px) {
+
+    /* layout.css */
+    #panel, #header, #footerMargin, #autoMargin
+    {
+        width: 768px;
+    }
+    #front-right-links
+    {
+        background: transparent;
+    }
+    #rightcol
+    {
+        width: 31%;
+        float: right;
+    }
+    #events
+    {
+        width: 16%;
+    }
+    #showcase
+    {
+        width: 63%;
+        padding: 0 2%;
+        margin: 0;
+    }
+    #rotation .rotation-link img
+    {
+        margin-left: -10%;
+        width: 150%;
+    }
+    #midcol.extended
+    {
+        float: left;
+        width: 510px;
+    }
+    #badges .bbItem.floatl, #badges .bbItem.floatr
+    {
+        float:none;
+        margin-top: 1.75em;
+        margin-bottom: 1em;
+        width: 75% !important;
+    }
+
+    /* daveliz.css */
+    td.nfImgCell
+    {
+        min-width:60px;
+    }
+
+    /* navigation.css */
+    #navg
+    {
+        font-size: 0.95em;
+    }
+    #navg li.top-menu-item a
+    {
+        padding-left: 5px;
+    }
+    #navg.fixed
+    {
+        width: 768px;
+    }
+
+    /* page-right.css */
+    body.not-front #rightcol
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    #rightcol .rightBoxRnd, #rightcol .rightAreaNoBox
+    {
+        width: 520px;
+        margin-right: 10px;
+    }
+    /* DA 10-10-12 */
+    /* so imgs in repositioned right content aren't right aligned */
+    #rightcol .rightAreaNoBox
+    {
+       text-align:left;
+    }
+    /* rare case of rightBox in middle column */
+    #midcol .rightBoxRnd
+    {
+        width:100%;
+        float:none;
+    }
+
+    /* style.css */
+    img
+    {
+        max-width: 100%;
+    }
+    img.boxed
+    {
+        max-width: 95%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    /* layout.css */
+    #panel, #header, #autoMargin, #mobilenavsection
+    {
+        width: 480px;
+        display: block;
+        clear: right;
+    }
+    #weather
+    {
+        display: none;
+    }
+    #events
+    {
+        width: 100%;
+    }
+    #events div
+    {
+        display: none;
+    }
+    #showcase
+    {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #rightcol
+    {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #student-section
+    {
+        width: 229px;
+        float: left;
+    }
+    #twidget
+    {
+        width: 219px;
+        float: right;
+        margin: 0 !important;
+    }
+    #badges .bbItem.floatl, #badges .bbItem.floatr
+    {
+        width: 78% !important;
+    }
+    #footerMargin
+    {
+        display: none;
+    }
+    
+    .not-front #midcol
+    {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    /* daveliz.css */
+    table#staffDir,
+    table#staffDir tbody,
+    table#staffDir th,
+    table#staffDir td,
+    table#staffDir tr
+    {
+      display: block;
+    }
+    table#staffDir td.dirName
+    {
+      font-weight:bold;
+      margin-top:1em;
+    }
+    table#staffDir tr.sdArea
+    {
+      margin-top:1em;
+    }
+    table#staffDir span.general
+    {
+      display:block;
+      margin-top: 1em;
+    }
+    table#staffDir td, table.staffDir td
+    {
+      padding-bottom: 0px;
+      padding-top: 0px;
+    }
+
+    /* header.css */
+    #wsearch
+    {
+        display: none;
+    }
+    #header p.tagline
+    {
+        display: none;
+    }
+    #utility-nav .mini {
+        display: inline;
+    }
+    #utility-nav .full {
+        display: none;
+    }
+
+    /* navigation.css */
+    #navigate
+    {
+        display: block;
+        background: url(../img/header/navtoggle.png) no-repeat 10px 10px;
+        background-color: #D7A900;
+        width: 37px;
+        height: 37px;
+        float: right;
+    }
+    #navigate.opened
+    {
+    	background: #306 url(../img/header/navtoggle-opened.png) no-repeat 10px 10px;
+    }
+
+    #navigate:hover
+    {
+    	background-color: #D7A900;
+    }
+
+    #crumbs
+    {
+        display: none;
+    }
+
+    #navg
+    {
+        background-color: #306;
+        height: 130px;
+        display: none;
+    }
+
+    #navg .top-menu-item .top-link a
+    {
+        display: inline;
+        padding: 0;
+    }
+
+    #navg li.top-menu-item.hidden
+    {
+        display: none;
+    }
+
+    #navg li.top-menu-item.selected .mainNavSubNav
+    {
+        display: block;
+    }
+
+    #navg ul.displayed
+    {
+        width: 100%;
+    }
+    #navg ul.displayed li
+    {
+        width: 45%;
+        float: left;
+    }
+
+    #navmobile
+    {
+        display: block;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #navg li.top-menu-item {
+        width: 45%;
+        height: auto;
+        padding: 5px 0 5px 5%;
+    }
+
+    #navg li.top-menu-item.selected
+    {
+        width: auto;
+        float: none;
+    }
+
+    #navg .top-link a
+    {
+        width: 70%;
+        height: auto;
+        color: white !important;
+    }
+    #navg .mainNavBlurb
+    {
+        display: none;
+    }
+    #navg li.top-menu-item .mainNavSubNav
+    {
+        width: auto;
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        border: 0;
+        background-color: transparent;
+    }
+
+    #navg li.top-menu-item a {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        height: auto;
+        width: auto;
+    }
+
+    #navg .mainNavSubNav li {
+        border: 0;
+    }
+    #navg.fixed
+    {
+        width: 480px;
+    }
+
+    /* page-right.css */
+    body.not-front #rightcol .rightBoxRnd, body.not-front #rightcol .rightAreaNoBox
+    {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    /* rotation.css */
+    #rotation .rotation-thumbs
+    {
+        display: none;
+    }
+    #rotation .slide-body
+    {
+        position: relative;
+        width: auto;
+        background-color: #444;
+        box-shadow: 0;
+        opacity: 1;
+        filter: alpha(opacity=100);
+        margin-top: -3px;
+        top: 0;
+        right: 0;
+    }
+
+    /* secondary.css */
+    #leftcol
+    {
+        display: none;
+    }
+
+    /* uwheader.css */
+    #wtext
+    {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* layout.css */
+    #panel, #header, #autoMargin, #mobilenavsection
+    {
+        width: 320px;
+    }
+    #header
+    {
+        height: 50px;
+    }
+    #footerMargin
+    {
+        display: none;
+    }
+    #vertnews
+    {
+        display: none;
+    }
+    #badges .bbItem.floatl, #badges .bbItem.floatr
+    {
+        width: 65% !important;
+    }
+    #student-section
+    {
+        width: 100%;
+        float: none;
+    }
+    #twidget
+    {
+        width: 100%;
+        float: none;
+        margin-top: 1.5em !important;
+    }
+
+    /* daveliz.css */
+    div#newsflashSignup
+    {
+        float:none;
+    }
+    div#aboutback
+    {
+        clear:left;
+        margin-top:1em;
+    }
+
+    /* header.css */
+    #coeLogo
+    {
+        width: 240px;
+        height: auto;
+        padding: 0;
+        margin: 10px 0 -10px 80px;
+        background: url(../img/ME_UW_purp_med.png) no-repeat;
+    }
+    #utility-nav,
+    #utility-nav .wlogoSmall {
+        height: 0px;
+    }
+
+    #coeLogo a
+    {
+    	height: 50px;
+    }
+
+    .sesqui .logoAbsolute
+    {
+    	background-image: url(../img/header/W_patch_small.gif);
+    	width: 50px;
+    }
+    .logoAbsolute
+    {
+    	height: 50px;
+    }
+
+    .wlogoSmall
+    {
+    	height: auto;
+    }
+    .wheader
+    {
+    	background-image: none;
+    	height: 2px;
+    }
+
+    /* navigation.css */
+    #navg
+    {
+        font-size: 0.95em;
+    }
+    #navg li.top-menu-item a
+    {
+        padding-left: 5px;
+    }
+    #navg.fixed
+    {
+        width: 320px;
+    }
+
+    /* oldcoe_secondary.css */
+    div.vidint
+   {
+      float:none;
+      text-align:left;
+      margin-top:.5em;
+      margin-bottom:.5em;
+   }
+
+   /* uwheader.css */
+    #wtext
+    {
+        display: none;
+    }
+}

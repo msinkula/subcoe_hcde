@@ -1,0 +1,247 @@
+.rightBoxRnd h2
+{
+	border-radius: 0;
+}
+
+
+/* the box for contact information, photos, quotations etc. that appears to the right of the main content */
+.rightBox, .rightBoxRnd {
+	float:right;
+	clear:right;
+	padding: 0px; /* no padding allows the colored band at the top (created with H1 or H2) to extend to the edges */
+	margin-bottom:20px; /* this provides spacing between rightBoxes if you need more than one */
+	background-color:#FFFFFF; /* makes background white even in MyCoE */
+}
+.rightBox{
+	width:200px;
+	border: 1px solid #C0C0C0;
+}
+.rightBoxRnd{
+  width:208px;
+	border: 0;
+	background:url('/sites/default/files/imgs/central/l.gif') repeat-y left;
+	overflow:hidden;
+	margin-right:-5px;
+	background-color:#FFFFFF;
+}
+
+
+/* this is a class used by Nursing in their rounded boxes */
+.pad3 {
+    padding:0 6px 0 2px;
+}
+
+/* these two heading styles create a colored band at the top of the box for the heading */
+.rightBox h1, .rightBox h2, .rightBoxRnd h1, .rightBoxRnd h2{
+	font-weight:bold;
+	padding:5px;
+	font-size:1.1em;
+	letter-spacing:1.1px;
+}
+.rightBox h1, .rightBox h2{
+	margin-bottom:0px; /* spacing will come from P elements after the heading */
+	margin-top:0px;
+}
+.rightBoxRnd h1, .rightBoxRnd h2 {
+    margin:0;
+    padding:0 8px 5px 8px; /* because the rounded top provides padding */
+}
+
+/* content of the rightBox within P tags are padded appropriately */
+.rightBox p, .rightBoxRnd p{
+	margin:0px;
+	padding:8px 8px 8px 8px;
+	font-size:.85em;
+}
+
+.rightBox p.sa4 {
+        padding-top:4px;
+        padding-bottom:4px;
+        margin:0px;
+}
+
+/* H1 is for the heading over contact information - gold band */
+.rightBox h1, .rightBoxRnd  h1{
+	background-color:#F0D576;
+}
+/* H2 is for a purple band with white text - a trial style that we may or may not use */
+.rightBox h2, .rightBoxRnd h2 {
+	background-color:#746488;
+	color:#FFFFFF;
+}
+
+/* H3 is for a sub-heading, no background color, within the box */
+.rightBox h3, .rightBoxRnd h3{
+	margin:4px;
+	margin-top: 12px;
+	margin-bottom: -2px;
+	font-size:1em !important;
+
+}
+
+/* one use for this is to prevent paragraphs in the rightBox (for contact info) from starting on a new line under a staff photo that should float left 
+.noclear { 
+	clear: none;
+}
+*/
+
+.rightBox ul, .rightBox ol, .rightBoxRnd ul, .rightBoxRnd ol {
+	padding: 8px;
+	font-size: .85em;
+	margin-left:20px;
+}
+
+/* the contact information */
+.rightBox p.contactInfo, .rightBoxRnd p.contactInfo{
+	font-size:.8em;
+}
+
+/* the name portion of the contact information */
+span.contactName{
+	font-weight:bold;
+}
+
+/* for quotations that appear in the rightBox */
+.rightBox p.quotation, .rightBoxRnd p.quotation{
+	color:#39275b;
+}
+
+/* for the name of the person the quotation is attributed to */
+.rightBox p.quoteName, .rightBoxRnd p.quoteName{
+	font-weight:normal;
+	text-align:right;
+}
+
+/* for a borderless area on the right side of the page */
+.rightAreaNoBox{
+	width:200px;
+	float:right;
+	clear:right;
+	text-align:center;
+	border: none;
+	padding: 0px; 
+	margin-bottom:20px; /* this provides spacing between rightAreaNoBox if you need more than one */
+}
+
+/* for larger-text quotations that appear without a border, e.g. in research highlights */
+.rightAreaNoBox p.quotation{
+	color:#330066;
+	font-size:1.3em;
+	font-style:italic;
+	text-align:center;
+}
+
+/* for caption under image in right area */
+.rightAreaNoBox p.caption{
+	font-weight:normal;
+	font-size:.8em;
+	text-align:center;
+}
+.rightAreaNoBox p.left {
+	font-weight:normal;
+	font-size:0.9em;
+	text-align:left;
+}
+.left {
+	font-weight:bold;
+	padding:5px;
+	margin-bottom:0px;
+	margin-top:0px;
+	text-align: left;
+}
+/* THIS BELONGS IN SECONDARY BUT IT'S CHECKED OUT, SO HERE'S MY NEW STYLE  */
+.centerBox{
+	width:510px;
+	/* float:center;  commenting this out since it's producing an error */
+	border: 1px solid #C0C0C0;
+	background-color:#E2DFF2;
+	padding: 10px; 
+	margin-bottom:20px; /* this provides spacing between rightBoxes if you need more than one */
+	color:#330066;
+	font-size:1.3em;
+	text-align:center;
+}
+
+.rightBox ul, .rightBoxRnd ul{
+	font-size: 12px;
+}
+
+.rightBox ul li, .rightBoxRnd ul li{
+	border-top: none;
+	font-size: 12px;
+	margin-left: 10px;
+}
+
+/* ADDED FOR DRUPAL SITE */
+div.rightBox h3, div.rightBoxRnd h3 {
+	margin-left:5px;
+	margin-top: 1.5em;
+	font-size:.9em;
+}
+
+/* NEW DEFINITIONS FOR THE ROUNDED RIGHT BOXES */
+.rightBoxRnd img{
+	margin-left:0px;
+       padding-left:0px;
+}
+
+.portalBlockBG{
+	background:url('/sites/default/files/imgs/central/r.gif') repeat-y right;
+ 	overflow:hidden;                    
+}
+.bgtopG .roundtop{
+	background:url('/sites/default/files/imgs/central/tr_gold.gif') no-repeat top right;
+}
+.bgtopP .roundtop{
+	background:url('/sites/default/files/imgs/central/tr_purp.gif') no-repeat top right;
+}
+.bgtopW .roundtop{
+	background:url('/sites/default/files/imgs/central/tr_white.gif') no-repeat top right;
+}
+
+.roundbottom{
+	background:url('/sites/default/files/imgs/central/br.gif') no-repeat bottom right;
+}
+.bgtopG, .bgtopP, bgtopW{
+	display:block;
+        background-repeat: repeat-x;
+        background-position: top;
+}
+
+.bgtopG{
+	background-image:url('/sites/default/files/imgs/central/t_gold.gif');
+}
+.bgtopP{
+	background-image:url('/sites/default/files/imgs/central/t_purp.gif');
+}
+.bgtopW{
+	background-image:url('/sites/default/files/imgs/central/t_white.gif');
+}
+.bgbottom{
+	background:url('/sites/default/files/imgs/central/b.gif') repeat-x bottom;
+	display:block;font-size:0;
+	clear:both;
+}
+.roundLeftBottom{
+	background:url('/sites/default/files/imgs/central/bl.gif') no-repeat bottom left;
+	display:block;
+	height:12px;
+}
+.roundLeftTop {
+	display:block;
+        height:8px;
+}
+.bgtopG .roundLeftTop {
+	background:url('/sites/default/files/imgs/central/tl_gold.gif') no-repeat top left;
+}
+
+
+.bgtopP .roundLeftTop {
+	background:url('/sites/default/files/imgs/central/tl_purp.gif') no-repeat top left;
+}
+
+
+.bgtopW .roundLeftTop {
+	background:url('/sites/default/files/imgs/central/tl_white.gif') no-repeat top left;
+}
+

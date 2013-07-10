@@ -1,0 +1,140 @@
+#tweetheader
+{
+	border-bottom: 0 !important;
+	padding: 13px 0 20px 35px;
+	background: url(../img/tw_bird.gif) top left no-repeat;
+	color: #3F2F58;
+}
+#tweetheader a
+{
+	color: #3F2F58;
+}
+#tweetfooter a
+{
+	color: #3F2F58;
+	text-decoration: none;
+	font-size: 22px;
+}
+#tweetfooter img
+{
+	vertical-align: bottom;
+	margin-right: 5px;
+}
+
+#tweets a
+{
+	color: #3F2F58;
+}
+
+.tweet
+{
+	margin-bottom: 20px;
+	font-size: 12px;
+	padding: 5px;
+}
+/*
+.tweet:nth-child(2n+1) .tweet-content
+{
+	background-color: #DFDDE8;
+}
+*/
+
+.tweet-content
+{
+    margin-left: 68px;
+    min-height: 48px;
+}
+.tweet-screenname
+{
+    font-weight: bold;
+    color: #39275B;
+    font-size: 130%;
+}
+.tweet-username
+{
+    margin-left: 5px;
+    color: #aaa;
+    font-size: 90%;
+}
+.tweet a,
+.tweet a:hover
+{
+    text-decoration: none;
+}
+
+.tweet-text
+{
+	
+}
+
+.tweet-ui
+{
+	font-size: 75%;
+	margin-top: 3px;
+	background: url(../img/twitter/twitter_bird.png) no-repeat left bottom;
+	padding: 5px 0 0 20px;
+}
+.tweet-rt
+{
+    margin-top: 3px;
+    padding-left: 18px;
+    background: url(../img/twitter/retweet_hover.png) no-repeat left -3px;
+    font-size: 75%;
+}
+
+.tweet-retweet
+{
+    padding: 2px 0 2px 18px;
+    margin-left: 3px;
+    background: url(../img/twitter/retweet.png) no-repeat left 0px;
+}
+.tweet-retweet:hover
+{
+    color: black !important;
+    background-image: url(../img/twitter/retweet_hover.png);
+}
+
+.tweet-reply
+{
+    padding: 2px 0 2px 18px;
+    margin-left: 3px;
+    background: url(../img/twitter/reply.png) no-repeat left -2px;
+}
+.tweet-reply:hover
+{
+    color: black !important;
+    background-image: url(../img/twitter/reply_hover.png);
+}
+
+.tweet-fav
+{
+    padding: 2px 0 2px 18px;
+    margin-left: 3px;
+    background: url(../img/twitter/favorite.png) no-repeat left -2px;
+}
+.tweet-fav:hover
+{
+    color: black !important;
+    background-image: url(../img/twitter/favorite_hover.png);
+}
+
+.tweet-ui a
+{
+	color: #2276BB;
+}
+.tweet-text a
+{
+	color: #2276BB !important;
+	font-size: 90%;
+	text-decoration: none;
+}
+.tweet-user-img
+{
+	float: left;
+	border: 4px solid white;
+	box-shadow: 0 0 5px #888;
+}
+.tweet-user-img img
+{
+    vertical-align: bottom;
+}

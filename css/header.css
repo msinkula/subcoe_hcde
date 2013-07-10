@@ -1,0 +1,308 @@
+#utility-nav
+{
+	position:relative;
+	font-size:.9em;
+	font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+	height:30px;
+	background-color:#39275B;
+}
+
+#utility-nav a:hover,#utility-nav a:visited,#utility-nav a
+{
+	color:#fff;
+}
+
+#wtext
+{
+	right: 0px;
+	position: absolute;
+	z-index:10;
+	padding-right:150px;
+	margin:2px 0 6px;
+}
+
+#autoMargin
+{
+	position:relative;
+	margin:0 auto;
+}
+
+#skipnav a
+{
+	color:#39275b;
+	display:block;
+	font-size:1em;
+	left:250px;
+	position:absolute;
+	text-decoration:none;
+	top:0;
+	width:10em;
+	z-index:-1;
+	margin:0;
+	padding:0;
+}
+
+#weather
+{
+	background-image:url(../img/header/weatherShadow_thin.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	color:#FFF;
+	float:right;
+	height:32px;
+	right:0;
+	top:0;
+	width:122px;
+	position:absolute;
+	font-size:.95em;
+}
+
+#weather div
+{
+	float:right;
+	padding:7px 13px 0 0;
+}
+
+#weather span
+{
+	display:block;
+	text-align:center;
+	line-height:1.5em;
+	margin:-3px;
+	padding:4px 0 0;
+}
+
+#weather .weather-city a
+{
+	color:#FFF;
+	text-decoration:none;
+}
+
+#utility-nav .weather-icon
+{
+	float:left;
+	border:none;
+	padding:0 0 0 8px;
+}
+#utility-nav .mini {
+	display: none;
+}
+
+#wlogoLink
+{
+	display:block;
+	width:74px;
+	height:74px;
+}
+
+#utility-nav .patchYes .wlogoSmall
+{
+	padding-left:82px;
+}
+
+#utility-nav .colorGold .wlogoSmall
+{
+	background-position:68px 5px;
+}
+
+#utility-nav .wlogoSmall
+{
+	height:25px;
+	float:left;
+}
+
+#utility-nav .wlogoSmall a
+{
+	text-indent:-1000px;
+	overflow:hidden;
+}
+
+#utility-nav .sesqui .logoAbsolute
+{
+	background-image:url(../img/header/W_patch.gif);
+	margin-left:-82px;
+	width:81px;
+}
+
+#utility-nav .logoAbsolute
+{
+	position:absolute;
+	height:75px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	z-index:10;
+}
+
+#utility-nav .colorGold
+{
+	background-position:0 -150px;
+}
+
+#utility-nav .margRight
+{
+	margin-right:20px;
+}
+
+#utility-nav .border
+{
+	background-image:url(../img/header/leftbar.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	display:block;
+	float:left;
+}
+
+#utility-nav .wheader li
+{
+	display:inline;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:700;
+	white-space:nowrap;
+}
+
+#utility-nav .wheader li a
+{
+	text-decoration:none;
+	float:left;
+	white-space:nowrap;
+	text-transform:uppercase;
+	padding:8px 6px 7px;
+}
+
+#utility-nav .wheader ul
+{
+	margin:0;
+}
+
+#header
+{
+	font-size:.9em;
+	color:#222;
+	font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+}
+
+#coeLogo
+{
+	display:block;
+	width:450px;
+	height:60px;
+	background-image:url(../img/weblogo-HCDE.png);
+	background-repeat:no-repeat;
+	background-position:right bottom;
+	float:left;
+	padding:10px 0 0 90px;
+}
+
+#coeLogo a
+{
+	text-indent:-9999px;
+	overflow:hidden;
+	display:block;
+	height:69px;
+}
+
+#logo-light
+{
+	width:500px;
+	height:500px;
+	position:absolute;
+	left:-211px;
+	top:-210px;
+	background:url(../img/logo-light.png) no-repeat 0 0;
+	z-index:-1;
+}
+
+#wsearch
+{
+	height:25px;
+	margin-top:17px;
+	float:right;
+}
+
+.wfield
+{
+	height:21px;
+	background:url(../img/tfbg3_8.png) no-repeat;
+	float:left;
+	padding:2px 0 0 3px;
+}
+
+input.wTextInput
+{
+	width:142px;
+	height:17px;
+	background:none;
+	border:none;
+	color:#777;
+	font-size:88%;
+	margin:0 0 0 5px;
+}
+
+.formbutton
+{
+	background:url(../img/submit2_8.png);
+	border:medium none;
+	color:transparent;
+	cursor:pointer;
+	height:18px;
+	text-indent:-9999px;
+	vertical-align:top;
+	width:30px;
+	margin:0;
+	padding:0 0 0 2px;
+}
+
+#header .tagline
+{
+	visibility:hidden;
+	text-align:right;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#FFF;
+	clear:right;
+	float:right;
+	position:relative;
+	top:0;
+	left:0;
+	margin:0;
+	padding:16px 0 13px;
+}
+
+#header .tagline a
+{
+	color:#FFF;
+}
+
+#header .taglineGold
+{
+	color:#d7a900;
+}
+
+#persistentUpperLinks
+{
+	padding-top:22px;
+	font-size:88%;
+	float:right;
+	margin:0 10px 0 0;
+}
+
+#persistentUpperLinks li
+{
+	display:inline;
+	padding-right:.3em;
+	border-right-style:solid;
+	border-right-width:thin;
+	border-color:#ccc;
+}
+
+#persistentUpperLinks li.last
+{
+	border-right:none;
+}
+
+#persistentUpperLinks a
+{
+	text-decoration:none;
+	color:#CCC;
+}

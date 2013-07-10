@@ -1,0 +1,209 @@
+h2
+{
+    background-color: #cbd7e1; /*USED TO BE #93B1CC (darker blue) and before that #ede8c4; (beige) */
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-size: 1.25em;
+}
+
+#badges {
+	margin-top:25px;
+}
+#badges .bbItem {
+	width: 45%;
+	height:100px; 
+	border: 1px solid #7a94ab;   /* LIZ CHANGED FROM  #93B1CC ON 4/2  */
+	padding: 18px 10px 10px 10px;
+	border-radius:5px;
+	position:relative;
+	font-size: 1.1em;
+}
+
+/* NEW CSS - DA 10/12 */
+/* coming up box */
+#badges .bbItem.floatl {  
+background-image:url('/sites/engr.washington.edu/files/imgs/wise-audience-th.jpg');
+background-position:bottom left;
+background-repeat:no-repeat;
+padding-left:90px;
+width:135px;
+}
+/* professional programs box */
+#badges .bbItem.floatr {   background-image:url('/sites/engr.washington.edu/files/page-front/students/sb_blue_shirt_m.jpg');
+background-position:top right;
+background-repeat:no-repeat;
+padding-right:90px;
+width:135px;
+}
+
+div#showcase div.bbItem a, div#showcase div.bbItem a:visited, div#showcase .morenews a {
+	color:#039;
+}
+div#showcase div.bbItem a:hover {
+	text-decoration:underline;
+}
+div.bbItem span.label {
+    display:inline-block;
+	padding:2px 7px 2px 7px;
+	position:absolute;
+	top:-11px;
+	left:10px;
+	background-color:#7a94ab;   /* LIZ CHANGED FROM  #93B1CC ON 4/2  */
+	border-radius:4px;
+	font-weight:bold;
+	color:white;
+	letter-spacing:1px;
+}
+div.bbItem h1 {
+	font-weight:bold;
+	font-size:1em;
+	line-spacing:normal;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+#social {
+	margin-top:2em;
+}
+
+#rightcol h2.tweethead, #twitlink {
+	border-bottom:0;
+	margin:0;
+	font-family: Arial, Helvetica, FreeSans, sans-serif;
+	text-transform:none;
+	color:#fff;
+	/* color:#39275B; */
+	font-weight:bold;
+	background-color:transparent;
+	font-size:1em;
+	letter-spacing:normal;
+}
+#rightcol h2.tweethead {
+	height: 20px;
+	padding:8px 0 4px 4px;
+}
+#rightcol h2.tweethead a, h2.tweethead a:visited, #twitlink a, #twitlink a:visited {
+	text-decoration:none;
+	color:#fff;
+	/* color:#39275B; */
+}
+#rightcol h2.tweethead a:hover, span.tweet_text a:hover, div#toplinks a:hover, div#gcalevents a:hover,
+#twitlink a:hover {
+	text-decoration:underline;
+}
+
+div#twidget {
+	border: 1px solid #93B1CC;
+	border-radius: .5em;
+	margin-top:3em;
+	margin-bottom:20px;
+	background-color:#7a95af;
+}
+
+.tweet_list .tweet_even {
+	/* background-color: #DFDDE8; */
+	border-top:1px dotted #39275b;
+	border-bottom:1px dotted #39275b;
+}
+.tweet_list .tweet_odd {
+	background-color: #fff;
+}
+
+
+div.tweet {
+	padding:0;
+	margin-bottom:0;
+}
+
+div#twitlink {
+	font-size: .9em;
+	padding:5px;
+	text-align:center;
+}
+
+.tweet_time{color:#C75B12;}
+
+#events .morenews
+{
+	margin-top: 20px;
+}
+
+.morenews a {
+	/* color: #039; */
+	color: #484160;
+}
+#events .morenews a, #events .morenews a:visited {
+	color:#4A7C01;
+}
+
+#showcase .morenews, #events .morenews {
+	font-size:.9em;
+	text-align:right;
+	border-top: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+#content ul.calendar-feed
+{
+	list-style-type:none;
+	margin-left:0;
+}
+
+ul.calendar-feed h4
+{
+	font-size:1.2em;
+}
+
+ul.calendar-feed p
+{
+	margin-top:.25em;
+}
+
+a:hover,#showcase h3 a:hover,.morenews a:hover,#front-right-links a:hover
+{
+	text-decoration:underline;
+}
+
+.floatl,#showcase .newsitem img
+{
+	float:left;
+}
+
+.floatr,div#newsflashSignup
+{
+	float:right;
+}
+
+#showcase p
+{
+	font-size:.9em;
+	margin: 0;
+}
+
+/* underline hover links */
+#showcase h3 a:hover, #showcase a:hover, .morenews a:hover {
+	text-decoration: underline;
+}
+
+#rightcol {
+	width: 359px;
+}
+
+#rightcol .views-row {
+	margin: 10px 0;
+}
+#rightcol .date-display-single {
+	font-size: 0.9em;
+}
+#rightcol .views-field-body {
+	font-size: 13px;
+}
+#rightcol .views-field-field-date {
+	font-weight: bold;
+}
+#rightcol .views-field-title {
+	font-size:.9em;
+	font-weight: bold;
+}
+
