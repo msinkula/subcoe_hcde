@@ -4,7 +4,9 @@
 	font-size:.9em;
 	font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
 	height:30px;
-	background-color:#39275B;
+	background-color:#1D142E;
+	border-bottom: 1px solid #6B5D84;
+	/*box-shadow: 0px 0px 3px #000;*/
 }
 
 #utility-nav a:hover,#utility-nav a:visited,#utility-nav a
@@ -17,7 +19,7 @@
 	right: 0px;
 	position: absolute;
 	z-index:10;
-	padding-right:150px;
+	/*padding-right:150px;*/
 	margin:2px 0 6px;
 }
 
@@ -55,6 +57,7 @@
 	width:122px;
 	position:absolute;
 	font-size:.95em;
+	display: none; /* Jan doesn't like the weather */
 }
 
 #weather div
@@ -180,6 +183,7 @@
 	font-size:.9em;
 	color:#222;
 	font-family:"Trebuchet MS",Verdana,Arial,Helvetica,sans-serif;
+	padding-bottom: 20px;
 }
 
 #coeLogo
@@ -202,14 +206,13 @@
 	height:69px;
 }
 
-#logo-light
-{
+#logo-light {
 	width:500px;
 	height:500px;
 	position:absolute;
 	left:-211px;
 	top:-210px;
-	background:url(../img/logo-light.png) no-repeat 0 0;
+	background:url(../img/logo-light-50.png) no-repeat 0 0;
 	z-index:-1;
 }
 

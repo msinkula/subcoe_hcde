@@ -1,9 +1,9 @@
 h2
 {
-    background-color: #cbd7e1; /*USED TO BE #93B1CC (darker blue) and before that #ede8c4; (beige) */
-    border-radius: 4px;
-    padding: 2px 7px;
-    font-size: 1.25em;
+    /*background-color: #cbd7e1;*/ /*USED TO BE #93B1CC (darker blue) and before that #ede8c4; (beige) */
+    /*border-radius: 4px;*/
+    padding-top: .25em;
+    font-size: 1.5em;
 }
 
 #badges {
@@ -162,7 +162,7 @@ ul.calendar-feed p
 
 a:hover,#showcase h3 a:hover,.morenews a:hover,#front-right-links a:hover
 {
-	text-decoration:underline;
+	/*text-decoration:underline;*/
 }
 
 .floatl,#showcase .newsitem img
@@ -177,17 +177,21 @@ a:hover,#showcase h3 a:hover,.morenews a:hover,#front-right-links a:hover
 
 #showcase p
 {
-	font-size:.9em;
-	margin: 0;
+	font-size:1em;
+	/*margin: 0;*/
+}
+
+#showcase p a{
+	border-bottom: none;
 }
 
 /* underline hover links */
 #showcase h3 a:hover, #showcase a:hover, .morenews a:hover {
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
-#rightcol {
-	width: 359px;
+#rightcol.newsevents {
+	width: 360px;
 }
 
 #rightcol .views-row {
@@ -203,7 +207,74 @@ a:hover,#showcase h3 a:hover,.morenews a:hover,#front-right-links a:hover
 	font-weight: bold;
 }
 #rightcol .views-field-title {
-	font-size:.9em;
+	font-size:1em;
 	font-weight: bold;
 }
 
+/* Front Page Showcase */
+#showcase {
+	
+}
+
+	#showcase a,  {
+		color:#39275B; /* PURPLE */
+		text-decoration: none;
+		}
+		
+	#showcase a:hover  {
+		color: #C79900; /* Gold */
+	}
+		
+/* Front Page News Feed */
+#news {
+		
+	}
+	
+	#news a {
+		color:#39275B; /* PURPLE */
+		text-decoration: none;
+		}
+		
+	#news a:hover  {
+		color: #C79900; /* Gold */
+	}
+	
+	#news h2, #events h2 {
+		/*background-color: #39275B;
+		color: #FFF;*/
+		background-image:url(../img/bg-newshead.png);
+		background-position: bottom right;
+		background-repeat: no-repeat;
+		padding-bottom: 16px;
+		margin-bottom: 0;
+	}
+	
+	div.field-content {
+		line-height: 1.5em;
+	}
+	
+/* Front Page Events */
+#events {
+		
+	}
+	
+	#events a {
+		color:#39275B; /* PURPLE */
+		text-decoration: none;
+		border-bottom: none;
+		}
+		
+	#events a:hover  {
+		color: #C79900; /* Gold */
+	}
+	
+
+		
+/* Hide this extra stuff */
+div.region-right-events div.more-link, div.views-field-field-short-title {
+	display: none;
+}
+
+div.region-right-events p {
+	font-weight: bold;
+}

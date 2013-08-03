@@ -1,3 +1,25 @@
+/* 
+	Web Color Palette: http://www.washington.edu/marketing/files/2012/09/WebColorPalette1.pdf 
+
+	Purple: http://slayeroffice.com/tools/color_palette/?hex=39275B
+	Gold (Original) : http://slayeroffice.com/tools/color_palette/?hex=C79900
+	Gold (Bright): http://slayeroffice.com/tools/color_palette/?hex=EBB700
+*/
+
+body {
+	
+	background:#30214D; /* Old browsers */
+	/*background-image:url(../img/bg-body.png);*/
+	background: -moz-linear-gradient(top,  #2B1D44 0%, #30214D 80%);
+	/*background-image:url(../img/noise.png);*/ /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(40%,#ffffff));*/ /* Chrome,Safari4+ */
+	/*background: -webkit-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* Chrome10+,Safari5.1+ */
+	/*background: -o-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* Opera 11.10+ */
+	/*background: -ms-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* IE10+ */
+	/*background: linear-gradient(to bottom,  #d1d1d1 0%,#ffffff 40%);*/ /* W3C */
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#ffffff',GradientType=0 );*/ /* IE6-9 */
+}
+
 #header, #footerMargin, #autoMargin, #panel
 {
     width: 990px;
@@ -46,18 +68,20 @@
 
 #events
 {
-    float: left;
-    width: 140px;
+    /*float: left;
+    width: 140px;*/
 }
 
-#showcase
-{
+#showcase {
     float: left;
     width: 550px;
-    border-right: 1px solid #ccc;
-    padding: 0 20px 20px 0;
-    margin-right: 20px;
+	/*border: 1px solid yellow;*/
+    /*border-right: 1px solid #ccc;*/
+    /*padding: 0 20px 20px 0;*/
+    /*margin-right: 20px;*/
 }
+
+
 
 #rotation .rotation-link img
 {
@@ -108,21 +132,27 @@
 
 #content
 {
-    width: 96%;
+    /*width: 96%;*/
+	/*border: 1px solid magenta;*/
     margin: 0 auto;
-    padding-top: 20px;
+	max-width: 990px;
+    padding: 20px;
+	
 }
 
 #visual-portal-wrapper
 {
-	background-color: #241649; /* http://slayeroffice.com/tools/color_palette/?hex=241649 */
+	/*background-color: #241649;*/ 
 	
 }
 
 
 
-#bg
-{
+#bg {
+	background-image:url(../img/bg-boxes.png);
+	background-position: top center;
+	background-repeat: repeat-x;
+	
 	position: relative;
 	z-index: 1;
 }
@@ -150,7 +180,12 @@
 	background-repeat: repeat-y;
 	background: white;
 	padding-bottom: 20px;
-    box-shadow: 0 0 7px #333;
+    box-shadow: 0 0 10px #000;
+	position: relative;
+    z-index: 10;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	/*border-radius: 10px;*/
 }
 
 #panel.fixed-adjust
@@ -160,38 +195,37 @@
 
 #footerBG
 {
-	border-top: 1px solid #5B5177;
-
+	border-top: 1px solid #6B5D84;
+	background: -moz-linear-gradient(top,  #1D142E 0%, #2B1D44 80%);
 	/*background: #d1d1d1;*/ /* Old browsers */
-	background: -moz-linear-gradient(top,  #120B25 0%, #241649 20%); /* FF3.6+ */
+	/*background: -moz-linear-gradient(top,  #120B25 0%, #241649 20%);*/ /* FF3.6+ */
 	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(40%,#ffffff));*/ /* Chrome,Safari4+ */
 	/*background: -webkit-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* Chrome10+,Safari5.1+ */
 	/*background: -o-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* Opera 11.10+ */
 	/*background: -ms-linear-gradient(top,  #d1d1d1 0%,#ffffff 40%);*/ /* IE10+ */
 	/*background: linear-gradient(to bottom,  #d1d1d1 0%,#ffffff 40%);*/ /* W3C */
 	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#ffffff',GradientType=0 );*/ /* IE6-9 */
-
-	margin-top: 10px;
+	margin-top: -100px;
+	padding-top: 100px;
 }
 
 #footerMargin
 {
 	margin: 0 auto;
-	padding: 0 0 15px 0;
-	background-image: url(../img/footer/footer_w_light.png);
+	/*background-image: url(../img/footer/footer_w_light.png);*/
 	background-repeat: no-repeat;
 	background-position: center top;
+	/*border: 1px solid magenta;*/
+	
 }
 
 #footerSkyline
 {
-	height: 120px;
-	background-image: url(../img/footer/bg-footerSkyline.jpg);
-	background-repeat: no-repeat;
+	height: 0;
+/*	background-image: url(../img/bg-footerSkylineDark.png);
+*/	background-repeat: no-repeat;
 	background-position: 200px bottom;
-	margin: 0 0 20px 0;
-	border-bottom: 1px solid #adadad;
-	margin: 0 auto;
+	margin: 0 auto 10px auto;
 }
 #footerSkyline h2
 {
@@ -206,72 +240,96 @@
 	background-color: transparent;
 	font-weight: normal;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
+	display: none; /* Yup... I hid this too */
 }
 
 div#footerShare {
 	float:right;
 	position:relative;
 	top:93px;
+	display: none; /* I hide alot of things */
 }
 
 #footerlinks ul li {
-	width:140px;
+	/*width:140px;*/
+}
+
+#footerlinks li.footercolumn {
+	width: 22%;
 }
 
 #footerMain {
+	
 	/*background-image: url(../img/footer/bg.gif);*/
-	background-color: #000;
-	background-repeat: repeat-x;
-	height: 25px;
+	/*background-color: #2B1D44;
+	background-repeat: repeat-x;*/
+	/*height: 25px;*/
 	margin-top: 10px;
 	overflow: hidden;
 	clear: both;
+	padding-bottom: 40px;
 }
 
 #footerLeft {
+	max-width:45%;
+	/*padding: 10px;*/
 	float: left;
-	padding-left: 40px;
+	/*padding-left: 40px;*/
 }
 
 #footerRight {
+	max-width: 45%;
 	float: right;
-	padding-right: 40px;
+	/*padding-right: 40px;*/
 }
 
 #footerCenter {
-	width: 260px;
+	max-width: 500px;
 	margin: 0 auto;
 }
+
+	#footerCenter li {
+		border-right: 1px solid #FFF;
+	}
+	
+	#footerCenter li:last-child {
+		border-right: none;
+	}
 
 #footerMain ul {
 	margin: 0;
 	padding: 0;
 	display: block;
 	list-style-type: none;
+	text-align: center;
 }
 
 #footerMain li {
 	display: inline;
 	font-family: Arial,Helvetica,sans-serif;
-	font-size: 9px;
-	font-weight: bold;
+	font-size: 11px;
+	line-height: 16px;
+	/*font-weight: bold;*/
 	white-space: nowrap;
+	
 }
 
 #footerMain li a {
 	text-decoration: none;
 	color: white;
-	float: left;
+	/*float: left;*/
 	padding: 8px 6px 7px 0;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 }
 
 .footerLinkBorder {
-    float: left;
+    display: inline;
     padding-left: 10px;
-    background-image: url(/sites/engr.washington.edu/themes/newcoe/img/footer/leftbar.png);
+	list-style-type:disc;
+	
+    /*background-image: url(/sites/engr.washington.edu/themes/newcoe/img/footer/leftbar.png);
     background-repeat: no-repeat;
-    background-position: 0 6px;
+    background-position: 0 6px;*/
 }
 
 #subnav
@@ -316,11 +374,11 @@ div#footerShare {
     position: relative;
 }
 
-#mobilenavsection
-{
+#mobilenavsection {
     display: none;
     margin: 0 auto;
-}
+	
+	}
 
 #image-hider
 {

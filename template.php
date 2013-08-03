@@ -111,6 +111,7 @@ function subcoe_hcde_menu_navigation_links($menu_name) {
      foreach ((array)$menu as $key => $item)
      {
         $menu[$key]['#menu-name'] = $menu_name;
+		
      }
 
      return $menu;
@@ -177,7 +178,7 @@ function subcoe_hcde_local_menu_navigation_links() {
      return array();
 }
  
-function subcoe_hcde_main_menu($menu) {
+function subcoe_hcde_main_menu($menu) { /* Mike says, "This looks like the old drop-down menu." */
       
      
      $html  = "<ul class=\"mainNavLinks\">";
@@ -252,7 +253,7 @@ function subcoe_hcde_menu_link($variables) {
      */
      $html .= " class=\"";
      if ($menu_item['#original_link']['in_active_trail']) {
-          $html .= " currentnav";
+          $html .= " currentnav"; /* Mike found that this line writes "currentnav" into the list item in the sub menu */
           $menu_item['#original_link']['#attributes']['class'][] = "selectedAccordion";
      }
      if ($menu_item['#original_link']['in_active_trail'] && isset($menu_item['#below']))
@@ -273,7 +274,7 @@ function subcoe_hcde_menu_link($variables) {
           $html .= l($menu_item['#title'], $menu_item['#href'], array('html' => true));
      }
      if (isset($menu_item['#below']) && !empty($menu_item['#below'])) {
-          $html .= "<ul>\n";
+          $html .= "<ul class=\"poop\">\n";
           $html .= subcoe_hcde_local_menu($menu_item['#below']);
           $html .= "</ul>\n";
      }

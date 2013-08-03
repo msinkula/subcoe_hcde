@@ -1,12 +1,13 @@
 #navg
 {
-    margin: 0;
+    margin: 0 20px;
     padding: 10px 0 0 0;
 	/* background: url(../img/menu_right.png) no-repeat -800px -800px; */
 	list-style-type: none;
 	clear: both;
     height: 40px;
     background-color: white;
+	border-bottom: 4px solid #C79900;
 }
 
 #navg.fixed
@@ -21,11 +22,12 @@
     position: absolute;
     background-color: #fefefe;
     padding: 10px;
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd;*/
+	border-top: 4px solid #C79900;
     display: none;
     top: 40px;
     left: -1px;
-    width: 410px;
+    /*width: 410px;*/ /* I changed this too */
 
     background-repeat: no-repeat;
     background-position: 0px 0;
@@ -51,6 +53,12 @@
     border-bottom-style: dotted;
     border-bottom-color: #CCC;
 }
+
+#navg .mainNavSubNav li:last-child {
+		border-bottom-width: 0px;
+	
+}
+
 #navg .mainNavSubNav li a {
     font-weight: normal;
     color: #5F5F5F;
@@ -63,8 +71,7 @@
     letter-spacing:normal;
 }
 
-#navg .top-link a
-{
+#navg .top-link a {
     color: black;
     font-weight: bold;
 }
@@ -82,9 +89,8 @@
 } 
 /*#navg li.top-menu-item:nth-last-child(-n+4) .mainNavSubNav,*/
 #navg li.menu-for-menu .mainNavSubNav,
-#navg li:last-child .mainNavSubNav
-{
-    left: -323px;
+#navg li:last-child .mainNavSubNav {
+    /*left: -323px;*/
 } 
 
 /*#navg li.top-menu-item:nth-last-child(-n+4) .mainNavBlurb,*/
@@ -104,6 +110,7 @@
     padding-left: 10px;
     border-left: 1px solid #ddd;
 	border: 1px solid;
+	display: none; /* Shh... I hid this thing */
 }
 #navg li.top-menu-item .mainNavBlurb p 
 {
@@ -123,8 +130,7 @@
 #navg li.top-menu-item {
 	float: left;
 	display: block;
-    width: 11%;
-
+    width: 12%;
 	padding-left: 0;
 	list-style-type: none;
     text-align: left;
@@ -132,13 +138,18 @@
     position: relative;
 }
 
-#navg li.top-menu-item a
-{
-    border-right: 1px dotted #ccc;
-    height: 23px;
+#navg li.top-menu-item a {
+    /*border-right: 1px dotted #ccc;*/
+    height: 35px;
     display: block;
     padding: 0 10px 5px 10px;
-}
+	/*border: 1px solid magenta;*/
+	}
+
+	#navg li.top-menu-item a:hover {
+		/*border-bottom: 2px solid black;*/
+	}
+	
 #navg li.top-menu-item:last-child a
 {
     border: 0 !important;
@@ -157,10 +168,19 @@
     display: block;
     line-height: 1em;
 }
-#navg a:hover,
-#navg .top-menu-item:hover > .top-link a
-{
-    color: #3D6EC8 !important;     
+
+#navg a:hover, #navg .top-menu-item:hover > .top-link a {
+    /*color: #3D6EC8 !important;*/
+	/* color: #39275B;  PURPLE */
+	color: #C79900; /* GOLD */ 
+}
+
+#navg a:hover, #navg a.active {
+	color: #C79900;
+	background-image:url(../img/bg-topnav-hover.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-position: 20px 34px;
 }
 
 #navg .mainNavSubNav li:hover{
@@ -180,6 +200,11 @@
     line-height: 1.3em;
     padding-top: 5px !important;
     padding-bottom: 0 !important;
+}
+
+/* Mike's Mobile Navigation */
+#mobilenav li.navSectionHead {
+	display: none;
 }
 
 #subnav
@@ -217,17 +242,16 @@
 	background-color: black;
 }
 
-#mobilenav
-{
+#mobilenav {
     margin: 5px 0;
-    background-color: #306;
+    background-color: #FFF;
     clear: right;
-    color: white;
-    box-shadow: 0 0 7px 1px #111;
+    box-shadow: 0 0 10px #000;
+	overflow: hidden;
 }
 #navigate.opened
 {
-	box-shadow: 0 -7px 7px -7px #111, 7px 0 7px -7px #111, -7px 0 7px -7px #111;
+	box-shadow: 0 0 10px #000;
 }
 
 #mobilecrumbs .breadcrumb
@@ -245,7 +269,7 @@
 
 #mobilenav a
 {
-    color: white;
+    /*color: white;*/
 }
 #mobilenav a:hover
 {
@@ -279,4 +303,66 @@ div.mobilenavlink a {
     cursor: pointer;
     display: none;
     margin: 0;
+}
+
+/* Mike's Mobile Navigation */
+
+#mobilenav-items {
+	/*border: 1px solid magenta;*/
+	padding: 5px 0;
+	margin: 0 10px;
+	/*width: 100%;*/
+}
+
+/* Top Level Items */
+#mobilenav-items li.top-menu-item {
+	font-family: 'PT Sans Narrow';
+	font-weight: normal;
+	font-size: 18px;
+	letter-spacing: .875px;
+	padding: 6px 0px;
+	border-bottom:1px solid #e2e2e2;
+}
+
+#mobilenav-items li.top-menu-item:last-child {
+	border-bottom: none;
+}
+
+	#mobilenav-items li.top-menu-item a {
+		padding-left: 10px;
+		color: #000;
+		
+	}
+	
+	#mobilenav-items li.top-menu-item a:hover, #mobilenav-items li.top-menu-item a.active {
+		background:url(../img/arrow_h3.gif) 0px 7px no-repeat;
+	}
+	
+	/* Secondary Level Items */
+	#mobilenav-items li.top-menu-item ul.mobilenav-subitems {
+		margin: 0px;
+		padding-left: 10px;
+		letter-spacing: 0;
+	}
+	
+	#mobilenav-items li.top-menu-item ul.mobilenav-subitems li {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 14px;
+		border-bottom:1px solid #e2e2e2;
+		padding: 5px 0;
+	}
+	
+		#mobilenav-items li.top-menu-item ul.mobilenav-subitems li:last-child {
+			border-bottom: none;
+			padding: 5px 0 0 0;
+		}
+		
+		#mobilenav-items li.top-menu-item ul.mobilenav-subitems li a:hover, #mobilenav-items li.top-menu-item ul.mobilenav-subitems li a.active {
+			background:url(../img/arrow_h3.gif) 0px 3px no-repeat;
+		}
+
+/* Tertiary Level Items */
+#mobilenav-items li.top-menu-item ul.mobilenav-subitems li ul.poop {
+	margin: 0;
+	padding-left: 10px;
 }

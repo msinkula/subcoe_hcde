@@ -2,42 +2,70 @@
 	border: 1px solid magenta;
 }*/
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1024px) {
 
     /* layout.css */
-    #panel, #header, #footerMargin, #autoMargin
-    {
-        width: 768px;
+    #panel, #header, #footerMargin, #autoMargin{
+        width: 96%;
     }
+	
+	#footerMain {
+		width: auto;
+	}
+	
     #front-right-links
     {
         background: transparent;
     }
-    #rightcol
-    {
-        width: 31%;
+    #rightcol {
+        /*width: 31%;*/
         float: right;
     }
-    #events
-    {
-        width: 16%;
+	
+    #events {
+       /* width: 16%;*/
     }
-    #showcase
-    {
-        width: 63%;
-        padding: 0 2%;
+	
+    #showcase {
+        width: 58%;
+        /*padding: 0 2%;*/
         margin: 0;
     }
+	
+	
+
+	
     #rotation .rotation-link img
     {
         margin-left: -10%;
         width: 150%;
     }
+	
+	#leftcol {
+		width: 21%;
+		/*border: 1px solid magenta;*/
+		
+	}
+	
+	#midcol
+    {
+        float: left;
+		width: 54%;
+		/*border: 1px solid magenta;*/
+        /*width: 510px;*/
+    }
+	
     #midcol.extended
     {
         float: left;
-        width: 510px;
+        width: 77%;
     }
+	
+	div.rightBox {
+		width: 100%;
+	}
+	
+	
     #badges .bbItem.floatl, #badges .bbItem.floatr
     {
         float:none;
@@ -55,23 +83,27 @@
     /* navigation.css */
     #navg
     {
-        font-size: 0.95em;
+        /*font-size: 0.95em;*/
     }
     #navg li.top-menu-item a
     {
-        padding-left: 5px;
+        /*padding-left: 5px;*/
     }
     #navg.fixed
     {
-        width: 768px;
+        /*width: 768px;*/
     }
 
     /* page-right.css */
-    body.not-front #rightcol
-    {
-        width: 100%;
-        margin-top: 20px;
+    #rightcol {
+        width: 20%;
+		/*border: 1px solid magenta;*/
+        /*margin-top: 20px;*/
     }
+	
+	#rightcol.newsevents {
+		width: 38%;
+	}
     
     #rightcol .rightBoxRnd, #rightcol .rightAreaNoBox
     {
@@ -95,22 +127,31 @@
     img
     {
         max-width: 100%;
+		height: auto;
     }
     img.boxed
     {
         max-width: 95%;
+		height: auto;
     }
 }
 
-@media screen and (max-width: 767px) {
+
+/* iPad Portrait */
+@media screen and (max-width: 768px) {
 
     /* layout.css */
     #panel, #header, #autoMargin, #mobilenavsection
     {
-        width: 480px;
+        width: 96%;
         display: block;
         clear: right;
     }
+	
+	#panel {
+		padding-top: 10px;
+		}
+		
     #weather
     {
         display: none;
@@ -121,20 +162,29 @@
     }
     #events div
     {
-        display: none;
+        /*display: none;*/
     }
-    #showcase
-    {
-        border: 0;
+    #showcase {
+		float:none;        
+		border: 0;
         margin: 0;
         padding: 0;
         width: 100%;
     }
-    #rightcol
-    {
+    #rightcol {
         width: 100%;
         margin-top: 10px;
     }
+	
+	#rightcol.newsevents {
+		float: none;
+		margin-top: 0;
+	}
+	
+		div.rightBox {
+			width: 100%;
+		}
+		
     #student-section
     {
         width: 229px;
@@ -152,8 +202,19 @@
     }
     #footerMargin
     {
-        display: none;
+        /*display: none;*/
+		padding: 10px 0;
+		width: 96%;
     }
+	
+	#footerMain {
+		width: auto;
+		border-top: none;
+	}
+	
+	#footerlinks {
+		display: none;
+	}
     
     .not-front #midcol
     {
@@ -226,9 +287,9 @@
     	background-color: #D7A900;
     }
 
-    #crumbs
-    {
-        display: none;
+    #crumbs {
+        /*display: none;*/
+		margin-top: 10px;
     }
 
     #navg
@@ -321,8 +382,7 @@
     }
 
     /* page-right.css */
-    body.not-front #rightcol .rightBoxRnd, body.not-front #rightcol .rightAreaNoBox
-    {
+    body.not-front #rightcol .rightBoxRnd, body.not-front #rightcol .rightAreaNoBox, #rightcol.newsevents {
         width: 100%;
         margin-right: 0;
     }
@@ -358,12 +418,12 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 
     /* layout.css */
     #panel, #header, #autoMargin, #mobilenavsection
     {
-        width: 320px;
+        width: 96%;
     }
     #header
     {
@@ -371,8 +431,18 @@
     }
     #footerMargin
     {
-        display: none;
+        /*display: none;*/
     }
+	
+	#footerRight {
+		display: none;
+	}
+	
+	#footerLeft {
+		max-width: 100%;
+		float: none;
+	}
+	
     #vertnews
     {
         display: none;
@@ -407,11 +477,14 @@
     /* header.css */
     #coeLogo
     {
-        width: 240px;
+        /*max-width: 500px;*/
+		width: 80%;
         height: auto;
         padding: 0;
         margin: 10px 0 -10px 80px;
-        background: url(../img/ME_UW_purp_med.png) no-repeat;
+        background: url(../img/weblogo-HCDE.png) no-repeat;
+		background-size: 100%;
+		border: 1px solid magenta;
     }
     #utility-nav,
     #utility-nav .wlogoSmall {
@@ -456,6 +529,21 @@
     {
         width: 320px;
     }
+	#panel {
+		padding-top: 10px;
+	}
+
+	#content {
+		padding: 10px;
+	}
+	
+	div#crumbs {
+		margin: 10px;
+	}
+	
+	#crumbsShare {
+		display:none;
+	}
 
     /* oldcoe_secondary.css */
     div.vidint

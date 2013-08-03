@@ -198,11 +198,11 @@ img.corner
 	background-color:#F6F6F6;
 }
 
-#leftNav li
-{
+#leftNav li {
 	display:block;
 	margin:0;
 	padding:1px 0;
+	line-height: 1.5em;
 }
 
 .selectedAccordion

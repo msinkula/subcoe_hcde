@@ -1,14 +1,32 @@
-body
-{
+/* 
+
+	Web Color Palette: http://www.washington.edu/marketing/files/2012/09/WebColorPalette1.pdf 
+
+	Purple: http://slayeroffice.com/tools/color_palette/?hex=39275B
+	Gold (Original) : http://slayeroffice.com/tools/color_palette/?hex=C79900
+	Gold (Bright): http://slayeroffice.com/tools/color_palette/?hex=EBB700
+
+*/
+
+body {
     font-size: 14px;
     font-family: "Helvetica neue", Helvetica, FreeSans, sans-serif;
     color: #333;
 }
 
-p
-{
-    line-height: 1.15;
-}
+p {
+    line-height: 1.5em;
+	}
+	
+	p a {
+		border-bottom: 1px solid #39275B;
+		text-decoration: none;
+	}
+	
+	p a:hover {
+		border-bottom: none;
+		text-decoration: none;
+	}
 
 #midcol, rightcol .content p
 {

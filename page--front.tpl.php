@@ -90,24 +90,13 @@ $nav_menu = array_merge(subcoe_hcde_menu_navigation_links('main-menu'), subcoe_h
 //$news_and_events = empty($variables['node']->field_news_and_events) ? "" : $variables['node']->field_news_and_events['und'][0]['value'];
 
 ?>
+<!-- Begin Utility Nav -->
 <div id="utility-nav">
     <div class="wheader patchYes colorGold sesqui">
         <div id="autoMargin">
             <div class="wlogoSmall">
                 <div class="logoAbsolute">
                     <a id="wlogoLink" href="//www.washington.edu/">University of Washington</a>
-                </div>
-            </div>
-            <div id="weather">
-                <a href="//www.atmos.washington.edu/weather/forecast.shtml" target="_blank">
-                <img width="32" height="32" src="//www.washington.edu/static/image/weather/11.png" alt="Fog/Mist 39°F" title="Fog/Mist 39°F" class="weather-icon">
-                </a>
-                <div>
-                    <span class="weather-city">
-                        <a target="_blank" title="Click for a detailed forecast" href="//www.atmos.washington.edu/weather/forecast.shtml">
-                        Seattle 39°F
-                        </a>
-                    </span>
                 </div>
             </div>
             <div id="wtext">
@@ -133,115 +122,86 @@ $nav_menu = array_merge(subcoe_hcde_menu_navigation_links('main-menu'), subcoe_h
                             <a href="//uw.edu/maps">Maps</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
                     </li>
-                    <li>
-                        <a href="<?php echo $front_page; ?>about/contact.html">Contact Us</a>
-                    </li>
-                    <li>
-                        <span class="border">
-                            <a href="<?php echo $front_page; ?>sitemap">Site Map</a>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="border">
-                            <a href="https://depts.washington.edu/myme2">MyME</a>
-                        </span>
-                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-<!-- /#uwheader -->
+<!-- End Utility Navigation -->
+
+<!-- Begin Page Wrapper -->
 <div id="visual-portal-wrapper">
     <div id="bg">
+    
+    	<!-- Begin Header -->
         <div id="header">
             <div id="logo-light" width="900"></div>
             <span id="coeLogo">
-            <a href="<?php echo $front_page; ?>">Department of Mechanical Engineering, University of Washington</a>
+            <a href="<?php echo $front_page; ?>">Department of Human Centered Design & Engineering, University of Washington</a>
             </span>
             <div id="wsearch">
                 <form id="google-cse-form" action="/search/google" method="get">
-                    <input type="search" id="google-cse-search" title="Search CoE" placeholder="Search" />
-                    <input value="Go" class="formbutton" type="submit">
+                    <input type="search" id="google-cse-search" title="Search HCDE" placeholder="Search" />
+                    <input value="Search" class="formbutton" type="submit">
                 </form>
             </div>
-<!--            <p class="tagline">
-                <span class="taglineGold">Innovation.</span> It's the Washington Way.
-            </p>
--->
-            <div class="clear"></div>
-
+            <div class="clear"></div> <!-- Old School! -->
         </div>
-        <!-- /#header -->
+        <!-- End Header -->
 
+		<!-- Begin Mobile Navigation Section -->
         <div id="mobilenavsection">
-
             <h3 id="navigate"></h3>
             <div id="mobilenav" style="display: none;">
+             <!-- Begin Mike's Mobile Navigation -->  
+            <ul id="mobilenav-items">
+            	<?php foreach ((array)$nav_menu as $menu): ?>
+                <li class="top-menu-item <?php echo $menu['#menu-name']; /* I need to print "current" here */ ?>">
+                    <?php 
+                        $menu['#attributes'] = array();
+                        echo l($menu['#title'], $menu['#href'], array('attributes' => $menu['#attributes'])); 
+                    ?>
+                </li>
+               <?php endforeach; ?>
+            </ul>
+            <!-- End Mike's Mobile Navigation -->
+            </div><!-- /#mobilenav -->
+        </div>
+		<!-- End Mobile Navigation Section -->
 
-                <div id="mobilecrumbs">
-                    Home
-                </div>
-
-                <?php foreach ($nav_menu as $menu_item): ?>
-                    <div class="mobilenavlink">
-                        <a href="<?php echo $menu_item['#href']; ?>">
-                            <?php echo subcoe_hcde_bbtohtml($menu_item['#title']); ?>
-                        </a>
-                    </div>
-                <?php endforeach; ?>
-
-                <div class="clear"></div>
-
-            </div>
-            <!-- /#mobilenav -->
-
-        </div> <!-- /#mobilenavsection -->
-
-
+		<!-- Begin Panel Section -->
         <div id="panel">
 
+			<!-- Begin Main Menu -->
             <ul id="navg">
-                <?php foreach ((array)$nav_menu as $menu): ?>
-                	<?php 
-                    $fid = isset($menu['options']['image_fid']) ? $menu['options']['image_fid']['fid'] : 0;
-                		$image_file = file_load($fid);
-                    $image_url  = $image_file ? file_create_url($image_file->uri) : null;
-                    $image_cap = @$menu['options']['image_caption'];
-                    $image_alt = @$menu['options']['image_alt'];
-                  ?>
-                    <li class="top-menu-item <?php echo $menu['#menu-name']; ?>">
-                        <span class="top-link">
-                            <?php 
-                                $menu['#attributes'] = array();
-                                if (strlen($menu['#title']) < 12)
-                                    $menu['#attributes']['class'][] = 'oneline';
-                                echo l($menu['#title'], $menu['#href'], array('attributes' => $menu['#attributes'])); 
-                            ?>
-                        </span>
-                        <?php if (isset($menu['#below'])): ?>
-	                        <div class="mainNavSubNav">
-	                            <ul class="mainNavLinks">
-	                                <?php foreach ((array)$menu['#below'] as $below): ?>
-	                                    <li class="child-menu-item">
-	                                        <?php $link = l($below['#title'], $below['#href'], array('attributes' => $below['#original_link']['#attributes'])); ?>
-	                                        <?php $link = str_replace("[br/]", "<br />", $link); ?>
-	                                        <?php $link = str_replace("[em]", "<em>", $link); ?>
-	                                        <?php echo str_replace("[/em]", "</em>", $link); ?>
-	                                    </li>
-	                                <?php endforeach; ?>
-	                            </ul>
-	                            <div class="mainNavBlurb">
-	                                <img src="<?php echo @$image_url; ?>" alt="<?php echo @$image_alt; ?>" title="<?php echo @$image_alt; ?>" class="image image-menu" width="200"><br>
-	                                <p><?php echo @$image_cap; ?></p>
-	                                <p>&nbsp;</p>                  
-	                            </div>
-	                            <div class="clear"></div>
-	                        </div>
-                    	<?php endif; ?>
-                    </li>
-                <?php endforeach; ?>
+			<?php foreach ((array)$nav_menu as $menu): ?>
+                <li class="top-menu-item <?php echo $menu['#menu-name']; ?>">
+                    <span class="top-link">
+					<?php 
+					$menu['#attributes'] = array();
+					if (strlen($menu['#title']) < 12)
+						$menu['#attributes']['class'][] = 'oneline';
+					echo l($menu['#title'], $menu['#href'], array('attributes' => $menu['#attributes'])); 
+                    ?>
+                    </span>
+                    <?php if (isset($menu['#below'])): ?>
+                        <div class="mainNavSubNav">
+                            <ul class="mainNavLinks">
+                                <?php foreach ((array)$menu['#below'] as $below): ?>
+                                    <li class="child-menu-item">
+                                        <?php $link = l($below['#title'], $below['#href'], array('attributes' => $below['#original_link']['#attributes'])); ?>
+                                        <?php $link = str_replace("[br/]", "<br />", $link); ?>
+                                        <?php $link = str_replace("[em]", "<em>", $link); ?>
+                                        <?php echo str_replace("[/em]", "</em>", $link); ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
             </ul>
+            <!-- End Main Menu -->
 
 
             <?php if ($page['content_top']): ?>
@@ -253,46 +213,35 @@ $nav_menu = array_merge(subcoe_hcde_menu_navigation_links('main-menu'), subcoe_h
             <!-- Begin Content -->
             <div id="content">
             
-                    <!-- Begin Flex Slider -->
-                    <section class="slider">
+                    <!-- Begin Flex Slider Demo -->
                     <div class="flexslider">
                     <ul class="slides">
                     <li>
                     <img src="http://www.sccc.premiumdw.com/examples/fsimg/test1.jpg" />
-                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus eget tortor bibendum aliquam eget in mi.</figcaption>
+                    <p class="flex-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus eget tortor bibendum aliquam. <a href="#">Learn More &raquo;</a></p>
                     </li>
                     <li>
                     <img src="http://www.sccc.premiumdw.com/examples/fsimg/test2.jpg" />
-                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus eget tortor bibendum aliquam eget in mi.</figcaption>
+                    <p class="flex-caption">Donec feugiat iaculis nibh sit amet varius. Sed laoreet justo vitae magna dignissim gravida. <a href="#">Learn More &raquo;</a></p>
                     </li>
                     <li>
                     <img src="http://www.sccc.premiumdw.com/examples/fsimg/test3.jpg" />
-                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus eget tortor bibendum aliquam eget in mi.</figcaption>
+                    <p class="flex-caption">Aenean eleifend odio felis. Phasellus odio orci, volutpat cursus gravida rhoncus, placerat at est. <a href="#">Learn More &raquo;</a></p>
                     </li>
                     <li>
                     <img src="http://www.sccc.premiumdw.com/examples/fsimg/test4.jpg" />
-                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus eget tortor bibendum aliquam eget in mi.</figcaption>
+                    <p class="flex-caption">Nulla a enim eu est congue pellentesque sit amet a lacus. Vestibulum ante ipsum primis in faucibus orci luctus. <a href="#">Learn More &raquo;</a></p>
                     </li>
                     </ul>
                     </div>
-                    </section>
                     <!-- End Flex Slider -->
    
-            		<!-- Begin Slider 
-                    <ul class="bxslider">
-                    <li><img src="http://eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/img/slider/2013graduation_splash.jpg" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet risus eget tortor bibendum aliquam eget in mi. " /></li>
-                    <li><img src="http://eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/img/slider/darivanh.jpg" title="Phasellus ultrices rutrum nisl in vestibulum. Ut sodales nisl in felis suscipit in sollicitudin metus varius. Pellentesque porttitor nibh quis nisi aliquam. " /></li>
-                    <li><img src="http://eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/img/slider/jellyfish.jpg" title="Nulla a enim eu est congue pellentesque sit amet a lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia." /></a></li>
-                    </ul>
-                     End Slider -->
-                    
+				<!-- Begin Front Page Showcase -->
                 <div id="showcase">
                     <?php if ($tabs): ?>
-                    
                         <div class="tabs">
                             <?php print render($tabs); ?>
                         </div>
-                    
                     <?php endif; ?>
                     <?php print render($page['help']); ?>
                         <?php if ($action_links): ?>
@@ -300,80 +249,71 @@ $nav_menu = array_merge(subcoe_hcde_menu_navigation_links('main-menu'), subcoe_h
                                 <?php print render($action_links); ?>
                             </ul>
                         <?php endif; ?>
-
                     <?php print render($page['content']); ?>
-
                     <?php echo render($page['content_bottom']); ?>
+                    <?php /*print $feed_icons;*/ ?>
+                </div>
+				<!-- End Front Page Showcase -->
 
-                    <?php print $feed_icons; ?>
-
+				<!-- Begin Front Page News & Events Feed -->
+                <div id="rightcol" class="newsevents">
                     
-                </div><!-- /#showcase -->
-
-
-                <div id="rightcol">
-
+                    <!-- Begin News -->
+					<?php if ($page['right_news']): ?>
+                    <div id="news">
+                    <h2><a href="/news">Latest News &raquo;</a></h2>
+                    <?php echo render($page['right_news']); ?>
+                    </div>
+                    <?php endif; ?>
+                    <!-- End News -->
+                    
+                    <!-- Begin Events -->
+                    <div id="events">
                     <h2>
-                        <a href="/news/news.html">ME News &amp; Events</a>
-                        <a href="http://pipes.yahoo.com/pipes/pipe.run?_id=218812583ca0b6b6104f6b52e73b84aa&_render=rss">
-                            <img src="<?php echo $theme_url; ?>/img/rss.png" height="16" style="position:absolute;right:3px;top:4px;" alt="RSS" title="ME News RSS feed">
-                        </a>
+                    <a href="http://depts.washington.edu/hcde/" target="_blank">Current Events from the HCDE Blog &raquo;</a>
+                    <a href="http://feeds.feedburner.com/HumanCenteredDesignEngineeringBlog" target="_blank">
+                        <img src="/sites/default/files/imgs/rss20.gif" style="position:absolute;right:3px;top:4px;" alt="RSS" title="HCDE Blog RSS"/>
+                    </a>
                     </h2>
-
-                    <?php echo render($page['right']); ?>
-                             
-
-                </div> <!-- /#rightcol -->
-
-                <div class="clear"></div>
-            </div> <!-- /#content -->
-        </div> <!-- /#panel -->
-
                     
-        <?php include_once "linkfarm.php"; ?>
+                    <?php if ($page['right_events']): ?>
+                    <div class="content">
+                        <?php
+                            $events = render($page['right_events']);
+                            $events = preg_replace ('/<li/', '<p', $events);
+                            $events = preg_replace ('/<\/li>/', ' &raquo;</p>', $events);
+                            $events = preg_replace ('/<div class="item-pst">/', '', $events);
+                            $events = preg_replace ('/<ul>/', '', $events);
+                            $events = preg_replace ('/(<p>)(<)(a)([^>]*>)/', '\\1'.'<!--<strong>&gt;&gt; </strong>-->'.'\\2'.'\\3'.'\\4', $events);
+                            $events = preg_replace ('/(<)(p\s\S+)(>)(<)(a)([^>]*>)/', '$1'.'$2'.'$3'.'<!--<strong>&gt;&gt; </strong>-->'.'$4'.'$5'.'$6', $events);
+                            $events = preg_replace ('/<\/ul>/', '', $events);
+                            print $events;
+                        ?>
+                    </div>
+                    <?php endif; ?>
+                    </div>
+                    <!-- End Events -->
+            
+                </div>
+                <!-- End Front Page News & Events Feed -->
 
-        <!-- /#obama -->
-        <div id="footerMain">
-            <div id="footerLeft">
-                <ul>
-                    <li class="centerText">
-                    <a href="/" onclick="pageTracker._trackPageview('/pt/fn/copyright');"><span>&copy;<span>2013</span> UW Department of Human Centered Design &amp; Engineering</span></a>
-                    </li>
-                </ul>
+                <div class="clear">&nbsp;</div>
+                
             </div>
-            <div id="footerRight">
-                <ul>
-                    <li class="centerText">
-                    <a href="//www.seattle.gov/" onclick="pageTracker._trackPageview('/pt/fn/seattle');"><span>SEATTLE, WASHINGTON</span></a>
-                    </li>
-                </ul>
-            </div>
-            <div id="footerCenter">
-                <ul>
-                    <li>
-                    <a href="/about/contact.html">Contact Us</a>
-                    </li>
-                    <li class="footerLinkBorder">
-                    <a href="https://depts.washington.edu/myme2">MyME</a>
-                    </li>
-                    <li class="footerLinkBorder">
-                    <a href="/login?go=/">Login</a>
-                    </li>
-                    <li class="footerLinkBorder">
-                    <a href="//www.washington.edu/online/privacy" onclick="pageTracker._trackPageview('/pt/fn/privacy');">Privacy</a>
-                    </li>
-                    <li class="footerLinkBorder">
-                    <a href="//www.washington.edu/online/terms" onclick="pageTracker._trackPageview('/pt/fn/terms');">Terms</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /#footerCenter -->
+            <!-- End Content -->
+            
         </div>
-        <!-- /#footerMain -->
+        <!-- End Panel Section
+
+        <!-- Begin Footer Links -->
+        <?php include_once "linkfarm.php"; ?>
+        <!-- End Footer Links -->
+
     </div>
     <!-- /#bg -->
+    
 </div>
-<!-- /#visual-portal-wrapper -->
+<!-- End Page Wrapper -->
 
 <div id="video-viewer-modal" style="display: none;"></div>
 <div id="video-viewer-pane" style="display: none;">
@@ -388,81 +328,32 @@ $nav_menu = array_merge(subcoe_hcde_menu_navigation_links('main-menu'), subcoe_h
 <script>
 (function($) 
 {
-	
-	/* Box Slider */
-	$('.bxslider').bxSlider({
-		mode: 'fade',
-		captions: true,
-		auto: true,
-		autoControls: true,
-		speed: 1000,
-		pause: 7000
-		}); 
-		
-	/* Flex Slider */
-	SyntaxHighlighter.all();
-    });
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-
-    $("#weather").weather({
-        feed: "https://www.atmos.washington.edu/rss/home.rss" 
-    });
 
     $("#navigate").click(function() {
         $("#mobilenav").slideToggle();
     });
 
-    var midcolRotationImgs = 
-    [
-        {
-            file: 'spr-cherryblossoms-students.jpg',
-            title: 'Spring means cherry blossoms on the Quad'
-        },
-        {
-            file: 'spr-sum-fal-students-walking-grassy.jpg',
-            title: 'Parrington Lawn on the north side of campus'
-        },
-        {
-            file: 'spr-sum-fal-bikes-rack.jpg',
-            title: 'Dedicated paths and marked bike lanes draw bicyclists year-round'
-        },
-        {
-            file: 'spr-sum-fal-class-wetlands-clouds.jpg',
-            title: 'Wetlands area on campus becomes an outdoor classroom and lab'
-        }
-    ];
-
-    var img = midcolRotationImgs[Math.floor(Math.random() * midcolRotationImgs.length)];
-    $("#midcol-rotation")
-        .attr("src", "<?php echo $files_url; ?>/page-front/midcol-rotation/" + img.file)
-        .attr("title", img.title)
-        .attr("alt", img.title);
-
-    $(".tweet").tweet({
-        username: "uwengineering",
-        join_text: "auto",
-        avatar_size: 0,
-        count: 3,
-        auto_join_text_default: "",
-        auto_join_text_ed: "",
-        auto_join_text_ing: "",
-        auto_join_text_reply: "",
-        auto_join_text_url: "",         
-        loading_text: "loading tweets...",
-        template: "{avatar}{text}{join}<span class='tweet_time'>({time})</span>",   // [string or function] template used to construct each tweet <li> - see code for available vars
-
+    $("#weather").weather({
+        feed: "https://www.atmos.washington.edu/rss/home.rss" 
     });
 
-    $("#google-cse-form").submit(function()
+    $("#google-cse-form").submit(function(e)
     {
         $(this).attr("action", $(this).attr("action") + "/" + $("#google-cse-search").val());
     });
 
 })(jQuery);
 </script>
+
+<!-- Begin Flex Slider -->
+<script type="text/javascript">
+	$(window).load(function(){
+	  $('.flexslider').flexslider({
+		animation: "slide",
+		start: function(slider){
+		  $('body').removeClass('loading');
+		}
+	  });
+	});
+</script>
+<!-- End Flex Slider -->

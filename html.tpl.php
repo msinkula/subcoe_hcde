@@ -75,21 +75,7 @@ $bg_url  = $bg_file ? file_create_url($bg_file->uri) : null;
 
 <!-- Begin Flex Slider --> 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.min.js">\x3C/script>')</script>
 <script src="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/js/jquery.flexslider.js"></script>
- 
-<!-- Syntax Highlighter -->
-<script type="text/javascript" src="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/js/shCore.js"></script>
-<script type="text/javascript" src="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/js/shBrushXml.js"></script>
-<script type="text/javascript" src="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/js/shBrushJScript.js"></script>
-
-<!-- Optional FlexSlider Additions -->
-<script src="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/js/jquery.easing.js"></script>
-<script src="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/js/jquery.mousewheel.js"></script>
-<script defer src="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/js/demo.js"></script>
-<link href="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/css/shCore.css" rel="stylesheet" type="text/css" />
-<link href="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/css/shThemeDefault.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/css/demo.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="//eranikus-3.engr.washington.edu/sites/eranikus-3.engr.washington.edu/themes/subcoe_hcde/css/flexslider.css" type="text/css" media="screen" />
 <!-- End Flex Slider --> 
 

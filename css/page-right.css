@@ -1,5 +1,4 @@
-.rightBoxRnd h2
-{
+.rightBoxRnd h2 {
 	border-radius: 0;
 }
 
@@ -12,11 +11,11 @@
 	margin-bottom:20px; /* this provides spacing between rightBoxes if you need more than one */
 	background-color:#FFFFFF; /* makes background white even in MyCoE */
 }
-.rightBox{
+.rightBox {
 	width:200px;
-	border: 1px solid #C0C0C0;
+	/*border: 1px solid #CCC;*/
 }
-.rightBoxRnd{
+.rightBoxRnd {
   width:208px;
 	border: 0;
 	background:url('/sites/default/files/imgs/central/l.gif') repeat-y left;
@@ -32,17 +31,17 @@
 }
 
 /* these two heading styles create a colored band at the top of the box for the heading */
-.rightBox h1, .rightBox h2, .rightBoxRnd h1, .rightBoxRnd h2{
+.rightBox h1, .rightBox h2, .rightBox h3, .rightBoxRnd h1, .rightBoxRnd h2, .rightBoxRnd h3 {
 	font-weight:bold;
 	padding:5px;
 	font-size:1.1em;
 	letter-spacing:1.1px;
 }
-.rightBox h1, .rightBox h2{
+.rightBox h1, .rightBox h2, .rightBox h3 {
 	margin-bottom:0px; /* spacing will come from P elements after the heading */
 	margin-top:0px;
 }
-.rightBoxRnd h1, .rightBoxRnd h2 {
+.rightBoxRnd h1, .rightBoxRnd h2, .rightBoxRnd h3 {
     margin:0;
     padding:0 8px 5px 8px; /* because the rounded top provides padding */
 }
@@ -50,7 +49,7 @@
 /* content of the rightBox within P tags are padded appropriately */
 .rightBox p, .rightBoxRnd p{
 	margin:0px;
-	padding:8px 8px 8px 8px;
+	padding:8px 4px;
 	font-size:.85em;
 }
 
@@ -65,19 +64,20 @@
 	background-color:#F0D576;
 }
 /* H2 is for a purple band with white text - a trial style that we may or may not use */
-.rightBox h2, .rightBoxRnd h2 {
-	background-color:#746488;
-	color:#FFFFFF;
+.rightBox h2, .rightBox h3, .rightBoxRnd h2, .rightBoxRnd h3 {
+	background-color:#ECEBEC;
+	border-bottom:1px solid #CCC;
+	color:#000;
 }
 
 /* H3 is for a sub-heading, no background color, within the box */
-.rightBox h3, .rightBoxRnd h3{
+/*.rightBox h3, .rightBoxRnd h3{
 	margin:4px;
 	margin-top: 12px;
 	margin-bottom: -2px;
 	font-size:1em !important;
 
-}
+}*/
 
 /* one use for this is to prevent paragraphs in the rightBox (for contact info) from starting on a new line under a staff photo that should float left 
 .noclear { 
@@ -174,9 +174,9 @@ span.contactName{
 
 /* ADDED FOR DRUPAL SITE */
 div.rightBox h3, div.rightBoxRnd h3 {
-	margin-left:5px;
+	/*margin-left:5px;
 	margin-top: 1.5em;
-	font-size:.9em;
+	font-size:.9em;*/
 }
 
 /* NEW DEFINITIONS FOR THE ROUNDED RIGHT BOXES */

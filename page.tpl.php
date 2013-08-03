@@ -92,24 +92,14 @@ $right_content_exists = !empty($infoboxes) || $page['right'] || $page['right_con
 
 ?>
 <script src="<?php echo $theme_url; ?>/js/switchcontent.js"></script>
+
+<!-- Begin Utility Navigation -->
 <div id="utility-nav">
     <div class="wheader patchYes colorGold sesqui">
         <div id="autoMargin">
             <div class="wlogoSmall">
                 <div class="logoAbsolute">
                     <a id="wlogoLink" href="//www.washington.edu/">University of Washington</a>
-                </div>
-            </div>
-            <div id="weather">
-                <a href="//www.atmos.washington.edu/weather/forecast.shtml" target="_blank">
-                <img width="32" height="32" src="//www.washington.edu/static/image/weather/11.png" alt="Fog/Mist 39°F" title="Fog/Mist 39°F" class="weather-icon">
-                </a>
-                <div>
-                    <span class="weather-city">
-                        <a target="_blank" title="Click for a detailed forecast" href="//www.atmos.washington.edu/weather/forecast.shtml">
-                        Seattle 39°F
-                        </a>
-                    </span>
                 </div>
             </div>
             <div id="wtext">
@@ -120,11 +110,10 @@ $right_content_exists = !empty($infoboxes) || $page['right'] || $page['right_con
                     </li>
                     <li>
                         <span class="border">
-        <a href="//engr.uw.edu" class="full">College of Engineering</a>
-        <a href="//engr.uw.edu" class="mini">CoE</a>
+                            <a href="//engr.uw.edu" class="full">College of Engineering</a>
+                            <a href="//engr.uw.edu" class="mini">CoE</a>
                         </span>
                     </li>
-
                     <li>
                         <span class="border">
                             <a href="//uw.edu/home/peopledir">Directories</a>
@@ -135,27 +124,20 @@ $right_content_exists = !empty($infoboxes) || $page['right'] || $page['right_con
                             <a href="//uw.edu/maps">Maps</a>&nbsp;&nbsp;&nbsp;&nbsp;
                         </span>
                     </li>
-                    <li>
-                        <a href="<?php echo $front_page; ?>about/contact.html">Contact Us</a>
-                    </li>
-                    <li>
-                        <span class="border">
-                            <a href="<?php echo $front_page; ?>sitemap">Site Map</a>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="border">
-                            <a href="https://depts.washington.edu/myme2/">MyME</a>
-                        </span>
-                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-<!-- /#uwheader -->
+<!-- End Utility Navigation -->
+
+<!-- Begin Page Wrapper -->
 <div id="visual-portal-wrapper">
+
+	<!-- Begin Background -->
     <div id="bg">
+    
+    	<!-- Begin Header -->
         <div id="header">
             <div id="logo-light"></div>
             <span id="coeLogo">
@@ -167,99 +149,79 @@ $right_content_exists = !empty($infoboxes) || $page['right'] || $page['right_con
                     <input value="Go" class="formbutton" type="submit">
                 </form>
             </div>
-<!--
-            <p class="tagline">
-                <span class="taglineGold">Innovation.</span> It's the Washington Way.
-            </p>
--->
+
             <div class="clear"></div>
 
         </div>
-        <!-- /#header -->
+        <!-- End Header -->
 
+		<!-- Begin Mobile Navigation Section -->
         <div id="mobilenavsection">
-
             <h3 id="navigate"></h3>
             <div id="mobilenav" style="display: none;">
+            <!-- Begin Mike's Mobile Navigation -->  
+            <ul id="mobilenav-items">
+            	<?php foreach ((array)$nav_menu as $menu): ?>
+                <li class="top-menu-item <?php echo $menu['#menu-name']; /* I need to print "current" here */ ?>">
+                    <?php 
+                        $menu['#attributes'] = array();
+                        echo l($menu['#title'], $menu['#href'], array('attributes' => $menu['#attributes'])); 
+                    ?>
+                    <ul class="mobilenav-subitems">
+                    <?php print subcoe_hcde_local_menu($local_menu); ?>
+                    </ul>
+                </li>
+               <?php endforeach; ?>
+            </ul>
+            <!-- End Mike's Mobile Navigation -->
+            </div><!-- /#mobilenav -->
+        </div>
+        <!-- End Mobile Navigation Section -->
 
-                <div id="mobilecrumbs">
-                    <?php if ($breadcrumb): ?>
-                        <?php echo subcoe_hcde_bbtohtml($breadcrumb); ?><span>&nbsp;&raquo; <?php echo subcoe_hcde_bbtohtml($title); ?></span>
-                    <?php endif; ?>
-                </div>
-
-                <?php foreach (subcoe_hcde_submenu($local_menu) as $key => $menu_item): ?>
-                    <?php // need to filter out the extra menu link created by the local_menu function first ?>
-                    <?php if (!is_numeric($key)): ?>
-                        <div class="mobilenavlink">
-                            <?php echo subcoe_hcde_bbtohtml(l($menu_item['#title'], $menu_item['#href'], array())); ?>
-                        </div>
-                    <?php endif; ?>
-                <?php endforeach; ?>
-
-                <div class="clear"></div>
-
-            </div>
-            <!-- /#mobilenav -->
-
-        </div> <!-- /#mobilenavsection -->
-
+		<!-- Begin Panel Section -->
         <div id="panel">
 
+			<!-- Begin Main Menu -->
             <ul id="navg">
-                <?php foreach ((array)$nav_menu as $menu): ?>
-                	<?php 
-                    $fid = isset($menu['options']['image_fid']) ? $menu['options']['image_fid']['fid'] : 0;
-                		$image_file = file_load($fid);
-                    $image_url  = $image_file ? file_create_url($image_file->uri) : null;
-                    $image_cap = @$menu['options']['image_caption'];
-                    $image_alt = @$menu['options']['image_alt'];
-                  ?>
-                    <li class="top-menu-item <?php echo $menu['#menu-name']; ?>">
-                        <span class="top-link">
-                            <?php 
-                                $menu['#attributes'] = array();
-                                if (strlen($menu['#title']) < 12)
-                                    $menu['#attributes']['class'][] = 'oneline';
-                                echo l($menu['#title'], $menu['#href'], array('attributes' => $menu['#attributes'])); 
-                            ?>
-                        </span>
-                        <?php if (isset($menu['#below'])): ?>
-	                        <div class="mainNavSubNav">
-	                            <ul class="mainNavLinks">
-	                                <?php foreach ((array)$menu['#below'] as $below): ?>
-	                                    <li class="child-menu-item">
-	                                        <?php $link = l($below['#title'], $below['#href'], array('attributes' => $below['#original_link']['#attributes'])); ?>
-	                                        <?php $link = str_replace("[br/]", "<br />", $link); ?>
-	                                        <?php $link = str_replace("[em]", "<em>", $link); ?>
-	                                        <?php echo str_replace("[/em]", "</em>", $link); ?>
-	                                    </li>
-	                                <?php endforeach; ?>
-	                            </ul>
-	                            <div class="mainNavBlurb">
-	                                <img src="<?php echo @$image_url; ?>" alt="<?php echo @$image_alt; ?>" title="<?php echo @$image_alt; ?>" class="image image-menu" width="200"><br>
-	                                <p><?php echo @$image_cap; ?></p>
-	                                <p>&nbsp;</p>                  
-	                            </div>
-	                            <div class="clear"></div>
-	                        </div>
-                    	<?php endif; ?>
-                    </li>
-                <?php endforeach; ?>
+			<?php foreach ((array)$nav_menu as $menu): ?>
+                <li class="top-menu-item <?php echo $menu['#menu-name']; ?>">
+                    <span class="top-link">
+                        <?php 
+                            $menu['#attributes'] = array();
+                            if (strlen($menu['#title']) < 12)
+                                $menu['#attributes']['class'][] = 'oneline';
+                            echo l($menu['#title'], $menu['#href'], array('attributes' => $menu['#attributes'])); 
+                        ?>
+                    </span>
+                    <?php if (isset($menu['#below'])): ?>
+                        <div class="mainNavSubNav">
+                            <ul class="mainNavLinks">
+                                <?php foreach ((array)$menu['#below'] as $below): ?>
+                                    <li class="child-menu-item">
+                                        <?php $link = l($below['#title'], $below['#href'], array('attributes' => $below['#original_link']['#attributes'])); ?>
+                                        <?php $link = str_replace("[br/]", "<br />", $link); ?>
+                                        <?php $link = str_replace("[em]", "<em>", $link); ?>
+                                        <?php echo str_replace("[/em]", "</em>", $link); ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
             </ul>
+            <!-- End Main Menu -->
 
             <div id="navg-image"></div>
-
             <?php if ($messages): ?>
                 <div id="messages">
                     <div class="section clearfix">
-                        <?php print $messages; ?>
+                    <?php print $messages; ?>
                     </div>
                 </div>
             <?php endif; ?>
 
             <div id="crumbs">
-
                 <?php if ($breadcrumb): ?>
                     <?php echo subcoe_hcde_bbtohtml($breadcrumb); ?> &raquo; <?php echo subcoe_hcde_bbtohtml($title); ?>
                 <?php endif; ?>
@@ -357,50 +319,14 @@ $right_content_exists = !empty($infoboxes) || $page['right'] || $page['right_con
             </div> <!-- /#content -->
         </div> <!-- /#panel -->
                    
+        <!-- Begin Footer Links -->
         <?php include_once "linkfarm.php"; ?>
-
-        <!-- /#obama -->
-        <div id="footerMain">
-            <div id="footerLeft">
-                <ul>
-                    <li class="centerText">
-                    <a href="/" onclick="pageTracker._trackPageview('/pt/fn/copyright');"><span>&copy;<span>2013</span> UW Department of Human Centered Design &amp; Engineering</span></a>
-                    </li>
-                </ul>
-            </div>
-            <div id="footerRight">
-                <ul>
-                    <li class="centerText">
-                    <a href="//www.seattle.gov/" onclick="pageTracker._trackPageview('/pt/fn/seattle');"><span>SEATTLE, WASHINGTON</span></a>
-                    </li>
-                </ul>
-            </div>
-            <div id="footerCenter">
-                <ul>
-                    <li>
-                    <a href="/about/contact.html">Contact Us</a>
-                    </li>
-                    <li class="footerLinkBorder">
-                    <a href="https://depts.washington.edu/myme2">MyME</a>
-                    </li>
-                    <li class="footerLinkBorder">
-                    <a href="/login?go=<?php echo $_SERVER['REQUEST_URI']; ?>">Login</a>
-                    </li>
-                    <li class="footerLinkBorder">
-                    <a href="//www.washington.edu/online/privacy" onclick="pageTracker._trackPageview('/pt/fn/privacy');">Privacy</a>
-                    </li>
-                    <li class="footerLinkBorder">
-                    <a href="//www.washington.edu/online/terms" onclick="pageTracker._trackPageview('/pt/fn/terms');">Terms</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /#footerCenter -->
-        </div>
-        <!-- /#footerMain -->
+        <!-- End Footer Links -->
+        
     </div>
     <!-- /#bg -->
 </div>
-<!-- /#visual-portal-wrapper -->
+<!-- End Page Wrapper -->
 
 <script>
 (function($) 
